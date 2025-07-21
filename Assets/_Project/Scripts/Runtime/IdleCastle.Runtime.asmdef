@@ -1,0 +1,26 @@
+{
+    "name": "IdleCastle.Runtime",
+    "rootNamespace": "IdleCastle.Runtime",
+    "references": [
+        "UniTask",
+        "Zenject",
+        "Modules.AppCore",
+        "Modules.AppCore.Zenject",
+        "Modules.ApplicationEvents.Zenject",
+        "Modules.Bootstrap",
+        "Modules.Configs",
+        "Modules.Persistence",
+        "Modules.StateMachine",
+        "Modules.StateMachine.Zenject",
+        "Modules.UISystem"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
