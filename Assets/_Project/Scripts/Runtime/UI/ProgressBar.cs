@@ -5,13 +5,13 @@ using UnityEngine.EventSystems;
 namespace IdleCastle.Runtime.UI
 {
 	[ExecuteAlways]
-	public sealed class ProgressBar : UIBehaviour
+	public class ProgressBar : UIBehaviour
 	{
 		[SerializeField, Range(0, 1)] private float _value;
 
 		[SerializeField] private RectTransform _fillRect;
 
-		public float Value
+		public float value
 		{
 			get => _value;
 			set => Set(value);

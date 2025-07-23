@@ -36,24 +36,24 @@ namespace Modules.UISystem
 		where TView : UIScreen
 		where TPresenter : IScreenPresenter<TView>
 	{
-		private readonly TPresenter _presenter;
-		private readonly TView      _view;
+		protected readonly TPresenter Presenter;
+		protected readonly TView      View;
 
-		public ScreenFacade (TPresenter presenter, IUISystem uiSystem)
+		protected ScreenFacade (TPresenter presenter, IUISystem uiSystem)
 		{
-			_presenter = presenter;
-			_view      = uiSystem.SpawnScreen<TView>();
+			Presenter = presenter;
+			View      = uiSystem.SpawnScreen<TView>();
 		}
 
 		public void Initialize ()
 		{
-			_presenter.Initialize(_view);
+			Presenter.Initialize(View);
 		}
 
 		public void Dispose ()
 		{
-			_presenter.Dispose();
-			Object.Destroy(_view.gameObject);
+			Presenter.Dispose();
+			Object.Destroy(View.gameObject);
 		}
 	}
 

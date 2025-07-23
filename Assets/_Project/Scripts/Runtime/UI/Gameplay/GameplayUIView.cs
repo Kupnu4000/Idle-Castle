@@ -1,14 +1,19 @@
 using Modules.UISystem;
 using UnityEngine;
-using UnityEngine.UI;
 
 
 namespace IdleCastle.Runtime.UI.Gameplay
 {
+	[AddressableAutoKey("Gameplay UI")]
 	public class GameplayUIView : UIScreen
 	{
-		[SerializeField] private Button _buyUpgradeButton;
+		[Space]
+		[SerializeField] private Transform _currencyWidgetRoot;
+		[SerializeField] private CurrencyWidget _currencyWidget;
 
-		public Button.ButtonClickedEvent OnBuyUpgradeButtonClicked;
+		public CurrencyWidget CreateCurrencyWidget ()
+		{
+			return Instantiate(_currencyWidget, _currencyWidgetRoot);
+		}
 	}
 }

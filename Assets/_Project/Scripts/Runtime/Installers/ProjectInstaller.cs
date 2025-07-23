@@ -1,4 +1,5 @@
 using IdleCastle.Runtime.AppCore;
+using IdleCastle.Runtime.Gameplay;
 using Modules.AppCore.Zenject;
 using Modules.ApplicationEvents.Zenject;
 using Modules.StateMachine.Zenject;
@@ -19,6 +20,11 @@ namespace IdleCastle.Runtime.Installers
 			PersistentDataInstaller.Install(Container);
 			StateMachineInstaller.Install(Container);
 			UIInstaller.Install(Container);
+
+			Container.Bind<GameplayController>()
+			         .FromSubContainerResolve()
+			         .ByInstaller<GameplayInstaller>()
+			         .AsTransient();
 		}
 	}
 }

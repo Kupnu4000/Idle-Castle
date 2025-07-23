@@ -1,10 +1,9 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using IdleCastle.Runtime.UI.Gameplay;
+using IdleCastle.Runtime.Gameplay;
 using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 using Modules.StateMachine.Interfaces;
-using Modules.UISystem;
 using Modules.UISystem.Interfaces;
 
 
@@ -14,36 +13,41 @@ namespace IdleCastle.Runtime.AppCore.States
 	public class GameplayState : IState<IAppStateController>
 	{
 		private readonly IUISystem           _uiSystem;
-		private readonly ScreenFacadeFactory _screenFacadeFactory; // TODO Refactor: это могла бы делать и IUISystem
-
-		private GameplayUI _gameplayUI;
+		private readonly GameplayController  _gameplayController;
 
 		public IAppStateController Context {get;}
 
-		public GameplayState (IAppStateController context, ScreenFacadeFactory screenFacadeFactory)
+		public GameplayState (
+			IAppStateController context,
+			IUISystem uiSystem,
+			GameplayController gameplayController
+		)
 		{
 			Context              = context;
-			_screenFacadeFactory = screenFacadeFactory;
+			_gameplayController  = gameplayController;
+			_uiSystem            = uiSystem;
 		}
 
 		public UniTask OnEnterAsync (CancellationToken cancellationToken = default)
 		{
 			_uiSystem.AttachToMainCamera();
 
-			_gameplayUI = _screenFacadeFactory.Create<GameplayUI>();
+			_gameplayController.Initialize();
 
 			return UniTask.CompletedTask;
 		}
 
 		public UniTask OnExitAsync (CancellationToken cancellationToken = default)
 		{
-			_gameplayUI.Dispose();
-			_gameplayUI = null;
+			_gameplayController.Dispose();
 
 			return UniTask.CompletedTask;
 		}
 
-		public void Tick (float deltaTime) {}
+		public void Tick (float deltaTime)
+		{
+			_gameplayController.Tick(deltaTime);
+		}
 
 		public void Dispose () {}
 	}

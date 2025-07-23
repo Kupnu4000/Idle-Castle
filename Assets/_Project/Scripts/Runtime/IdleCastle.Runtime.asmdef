@@ -2,6 +2,9 @@
     "name": "IdleCastle.Runtime",
     "rootNamespace": "IdleCastle.Runtime",
     "references": [
+        "Unity.Localization",
+        "Unity.ResourceManager",
+        "Unity.TextMeshPro",
         "UniTask",
         "Zenject",
         "Modules.AppCore",
@@ -9,6 +12,7 @@
         "Modules.ApplicationEvents.Zenject",
         "Modules.Bootstrap",
         "Modules.Configs",
+        "Modules.Currencies",
         "Modules.Persistence",
         "Modules.StateMachine",
         "Modules.StateMachine.Zenject",
