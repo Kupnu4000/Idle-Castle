@@ -33,7 +33,7 @@ namespace IdleCastle.Runtime.Gameplay.BuildingLogic
 			{
 				int incomeMultiplier = (int)(_incomeTimer / _progressTime);
 
-				_incomeTimer -= _progressTime;
+				_incomeTimer %= _progressTime;
 
 				GeneratedIncome income = new(CurrencyId, Income * incomeMultiplier);
 

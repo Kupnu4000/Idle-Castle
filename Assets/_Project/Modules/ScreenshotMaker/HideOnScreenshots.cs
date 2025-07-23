@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace AnagramQuiz.Runtime.Utilities.ScreenshotMaker
+namespace _Project.Modules.ScreenshotMaker
 {
 	public class HideOnScreenshots : MonoBehaviour
 	{

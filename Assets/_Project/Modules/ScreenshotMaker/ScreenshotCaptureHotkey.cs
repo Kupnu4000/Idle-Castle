@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace AnagramQuiz.Runtime.Utilities.ScreenshotMaker
+namespace _Project.Modules.ScreenshotMaker
 {
 	public static class ScreenshotCaptureHotkey
 	{

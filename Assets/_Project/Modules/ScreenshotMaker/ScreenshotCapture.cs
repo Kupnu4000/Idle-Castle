@@ -3,7 +3,7 @@ using System.IO;
 using UnityEngine;
 
 
-namespace AnagramQuiz.Runtime.Utilities.ScreenshotMaker
+namespace _Project.Modules.ScreenshotMaker
 {
 	public class ScreenshotCapture : MonoBehaviour
 	{
