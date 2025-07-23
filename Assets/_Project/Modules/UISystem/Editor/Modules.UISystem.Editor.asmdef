@@ -1,0 +1,19 @@
+{
+    "name": "Modules.UISystem.Editor",
+    "rootNamespace": "Modules.UISystem.Editor",
+    "references": [
+        "Modules.UISystem",
+        "Unity.Addressables.Editor"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

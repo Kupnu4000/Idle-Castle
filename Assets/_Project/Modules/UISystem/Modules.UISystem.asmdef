@@ -1,0 +1,21 @@
+{
+    "name": "Modules.UISystem",
+    "rootNamespace": "Modules.UISystem",
+    "references": [
+        "DOTween.Modules",
+        "Zenject",
+        "UniTask",
+        "Unity.ResourceManager",
+        "Unity.Addressables",
+        "Unity.RenderPipelines.Universal.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
