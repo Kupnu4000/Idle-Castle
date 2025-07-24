@@ -3,7 +3,6 @@ using IdleCastle.Runtime.Gameplay;
 using IdleCastle.Runtime.UI.Widgets;
 using JetBrains.Annotations;
 using Modules.UISystem;
-using UnityEngine;
 
 
 namespace IdleCastle.Runtime.UI.Gameplay
@@ -48,10 +47,6 @@ namespace IdleCastle.Runtime.UI.Gameplay
 			widget.SetValue(newValue);
 		}
 
-		public void Dispose ()
-		{
-			Object.Destroy(_view);
-			_view = null;
-		}
+		public void Dispose () {}
 	}
 }

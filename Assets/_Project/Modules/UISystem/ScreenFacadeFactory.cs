@@ -32,7 +32,7 @@ namespace Modules.UISystem
 		void Initialize ();
 	}
 
-	public class ScreenFacade<TView, TPresenter> : IScreenFacade
+	public abstract class ScreenFacade<TView, TPresenter> : IScreenFacade
 		where TView : UIScreen
 		where TPresenter : IScreenPresenter<TView>
 	{

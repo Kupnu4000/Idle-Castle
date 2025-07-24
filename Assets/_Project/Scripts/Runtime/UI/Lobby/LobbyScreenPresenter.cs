@@ -1,10 +1,11 @@
 using System;
+using JetBrains.Annotations;
 using Modules.UISystem;
-using Object = UnityEngine.Object;
 
 
 namespace IdleCastle.Runtime.UI.Lobby
 {
+	[UsedImplicitly]
 	public class LobbyScreenPresenter : IScreenPresenter<LobbyScreenView>
 	{
 		private LobbyScreenView _view;
@@ -12,13 +13,8 @@ namespace IdleCastle.Runtime.UI.Lobby
 		public void Initialize (LobbyScreenView view)
 		{
 			_view = view;
-			// _view.SettingsButtonClicked.AddListener(HandleSettingsButtonClicked);
-			_view.PlayButtonClicked.AddListener(HandlePlayButtonClicked);
-		}
 
-		private void HandleSettingsButtonClicked ()
-		{
-			throw new NotImplementedException();
+			_view.PlayButtonClicked.AddListener(HandlePlayButtonClicked);
 		}
 
 		private void HandlePlayButtonClicked ()
@@ -30,8 +26,6 @@ namespace IdleCastle.Runtime.UI.Lobby
 		{
 			// _view.SettingsButtonClicked.RemoveAllListeners();
 			_view.PlayButtonClicked.RemoveAllListeners();
-
-			Object.Destroy(_view.gameObject);
 
 			_view = null;
 		}
