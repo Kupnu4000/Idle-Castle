@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using IdleCastle.Runtime.Gameplay.BuildingLogic;
+using IdleCastle.Runtime.Zenject;
 using JetBrains.Annotations;
 
 
@@ -11,7 +11,7 @@ namespace IdleCastle.Runtime.Gameplay
 	[UsedImplicitly]
 	public class BuildingManager : IDisposable
 	{
-		private readonly BuildingFactory    _buildingFactory;
+		private readonly GenericFactory     _genericFactory;
 		private readonly HashSet<IBuilding> _buildings = new();
 		private readonly Wallet             _wallet    = new Wallet(); // TODO: load from save
 
@@ -21,14 +21,14 @@ namespace IdleCastle.Runtime.Gameplay
 			remove => _wallet.CurrencyChanged -= value;
 		}
 
-		public BuildingManager (BuildingFactory buildingFactory)
+		public BuildingManager (GenericFactory genericFactory)
 		{
-			_buildingFactory = buildingFactory;
+			_genericFactory = genericFactory;
 		}
 
 		public void Create<TBuilding> () where TBuilding : class, IBuilding
 		{
-			TBuilding building = _buildingFactory.Create<TBuilding>();
+			TBuilding building = _genericFactory.Create<TBuilding>();
 
 			RegisterBuilding(building);
 		}

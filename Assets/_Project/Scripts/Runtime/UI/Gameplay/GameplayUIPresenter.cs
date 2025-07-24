@@ -1,5 +1,6 @@
 using System.Collections.Generic;
-using IdleCastle.Runtime.Gameplay.BuildingLogic;
+using IdleCastle.Runtime.Gameplay;
+using IdleCastle.Runtime.UI.Widgets;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using UnityEngine;

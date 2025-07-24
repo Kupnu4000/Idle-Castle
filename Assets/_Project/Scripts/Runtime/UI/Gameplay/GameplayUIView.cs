@@ -1,3 +1,4 @@
+using IdleCastle.Runtime.UI.Widgets;
 using Modules.UISystem;
 using UnityEngine;
 

@@ -1,16 +1,16 @@
+using IdleCastle.Runtime.Gameplay;
 using JetBrains.Annotations;
 using Zenject;
 
 
-namespace IdleCastle.Runtime.Gameplay.BuildingLogic
+namespace IdleCastle.Runtime.Zenject
 {
 	[UsedImplicitly]
-	public class BuildingFactory
+	public class GenericFactory
 	{
-		// TODO Refactor: тут можно использовать ServiceProvider
 		private readonly IInstantiator _instantiator;
 
-		public BuildingFactory (IInstantiator instantiator)
+		public GenericFactory (IInstantiator instantiator)
 		{
 			_instantiator = instantiator;
 		}

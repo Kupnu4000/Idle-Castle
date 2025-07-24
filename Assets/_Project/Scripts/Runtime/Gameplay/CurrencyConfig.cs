@@ -2,7 +2,7 @@ using Modules.Configs;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.Gameplay.BuildingLogic
+namespace IdleCastle.Runtime.Gameplay
 {
 	public abstract class CurrencyConfig : Config
 	{

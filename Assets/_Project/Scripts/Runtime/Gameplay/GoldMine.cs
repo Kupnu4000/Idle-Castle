@@ -2,7 +2,7 @@ using System;
 using JetBrains.Annotations;
 
 
-namespace IdleCastle.Runtime.Gameplay.BuildingLogic
+namespace IdleCastle.Runtime.Gameplay
 {
 	// TODO Refactor: может передавать конфиг в конструктор, а экземпляр класса создавать в фабрике?
 	[UsedImplicitly]

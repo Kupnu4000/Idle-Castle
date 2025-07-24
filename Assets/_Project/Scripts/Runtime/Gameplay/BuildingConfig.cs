@@ -1,7 +1,7 @@
 using Modules.Configs;
 
 
-namespace IdleCastle.Runtime.Gameplay.BuildingLogic
+namespace IdleCastle.Runtime.Gameplay
 {
 	// TODO: выделить под конфиги зданий отдельный инсталлер
 	// TODO: remove?

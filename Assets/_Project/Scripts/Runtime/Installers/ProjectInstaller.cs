@@ -1,5 +1,6 @@
 using IdleCastle.Runtime.AppCore;
 using IdleCastle.Runtime.Gameplay;
+using IdleCastle.Runtime.Zenject;
 using Modules.AppCore.Zenject;
 using Modules.ApplicationEvents.Zenject;
 using Modules.StateMachine.Zenject;
@@ -13,6 +14,9 @@ namespace IdleCastle.Runtime.Installers
 		public override void InstallBindings ()
 		{
 			Container.BindInterfacesTo<AppStatesSetup>().AsSingle();
+
+			Container.Bind<GenericFactory>()
+			         .AsSingle();
 
 			AppCoreInstaller.Install(Container);
 			AppEventsMonitorInstaller.Install(Container);

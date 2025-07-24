@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using IdleCastle.Runtime.Gameplay.BuildingLogic;
 
 
 namespace IdleCastle.Runtime.Gameplay

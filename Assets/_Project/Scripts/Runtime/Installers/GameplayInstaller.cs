@@ -1,5 +1,4 @@
 using IdleCastle.Runtime.Gameplay;
-using IdleCastle.Runtime.Gameplay.BuildingLogic;
 using JetBrains.Annotations;
 using Zenject;
 
@@ -18,9 +17,6 @@ namespace IdleCastle.Runtime.Installers
 			         .AsSingle();
 
 			Container.BindInterfacesTo<TickRuner>()
-			         .AsSingle();
-
-			Container.Bind<BuildingFactory>()
 			         .AsSingle();
 		}
 	}

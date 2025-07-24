@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-namespace IdleCastle.Runtime.UI
+namespace IdleCastle.Runtime.UI.Widgets
 {
 	[ExecuteAlways]
 	public class ProgressBar : UIBehaviour

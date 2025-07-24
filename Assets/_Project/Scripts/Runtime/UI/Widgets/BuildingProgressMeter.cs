@@ -1,7 +1,7 @@
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.UI
+namespace IdleCastle.Runtime.UI.Widgets
 {
 	public class BuildingProgressMeter : MonoBehaviour
 	{

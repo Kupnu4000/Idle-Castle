@@ -1,7 +1,7 @@
 using System;
 
 
-namespace IdleCastle.Runtime.Gameplay.BuildingLogic
+namespace IdleCastle.Runtime.Gameplay
 {
 	// TODO Refactor: rename это по идее IIncomeGenerator
 	public interface IBuilding

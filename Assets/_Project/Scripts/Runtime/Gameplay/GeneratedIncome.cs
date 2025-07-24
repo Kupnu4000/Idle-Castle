@@ -1,4 +1,4 @@
-namespace IdleCastle.Runtime.Gameplay.BuildingLogic
+namespace IdleCastle.Runtime.Gameplay
 {
 	public readonly struct GeneratedIncome
 	{

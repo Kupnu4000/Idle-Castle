@@ -1,10 +1,10 @@
-using IdleCastle.Runtime.Gameplay.BuildingLogic;
+using IdleCastle.Runtime.Gameplay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace IdleCastle.Runtime.UI.Gameplay
+namespace IdleCastle.Runtime.UI.Widgets
 {
 	public class CurrencyWidget : MonoBehaviour
 	{

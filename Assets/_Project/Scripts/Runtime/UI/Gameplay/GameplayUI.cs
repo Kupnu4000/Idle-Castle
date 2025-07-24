@@ -1,3 +1,4 @@
+using IdleCastle.Runtime.Gameplay;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using Modules.UISystem.Interfaces;

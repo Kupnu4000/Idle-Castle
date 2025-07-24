@@ -1,7 +1,7 @@
 using System;
 
 
-namespace IdleCastle.Runtime
+namespace IdleCastle.Runtime.Gameplay
 {
 	public readonly struct ItemId : IEquatable<ItemId>
 	{
