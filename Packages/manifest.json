@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "com.cysharp.messagepipe": "https://github.com/Cysharp/MessagePipe.git?path=src/MessagePipe.Unity/Assets/Plugins/MessagePipe",
+    "com.cysharp.messagepipe.zenject": "https://github.com/Cysharp/MessagePipe.git?path=src/MessagePipe.Unity/Assets/Plugins/MessagePipe.Zenject",
     "com.multicast.app-core": "1.0.1",
     "com.multicast.app-events": "1.0.0",
     "com.multicast.app-version": "1.0.0",

@@ -7,6 +7,8 @@
         "Unity.TextMeshPro",
         "UniTask",
         "Zenject",
+        "MessagePipe",
+        "MessagePipe.Zenject",
         "Modules.AppCore",
         "Modules.AppCore.Zenject",
         "Modules.ApplicationEvents.Zenject",

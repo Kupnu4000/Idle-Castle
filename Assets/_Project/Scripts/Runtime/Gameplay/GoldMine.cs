@@ -1,5 +1,6 @@
-using System;
+using IdleCastle.Runtime.Gameplay.Messages;
 using JetBrains.Annotations;
+using MessagePipe;
 
 
 namespace IdleCastle.Runtime.Gameplay
@@ -12,17 +13,18 @@ namespace IdleCastle.Runtime.Gameplay
 
 		public ItemId CurrencyId => ItemDef.Currencies.Gold;
 
-		public event Action<GeneratedIncome> IncomeGenerated;
-
 		private readonly float _progressTime;
 
 		private float _incomeTimer;
 
+		private readonly IPublisher<IncomeGenerated> _incomePublisher;
+
 		private const float Income = 1f; // TODO Refactor: это надо хранить в конфиге
 
-		public GoldMine (GoldMineConfig config)
+		public GoldMine (GoldMineConfig config, IPublisher<IncomeGenerated> incomePublisher)
 		{
-			_progressTime = config.ProgressTime;
+			_incomePublisher = incomePublisher;
+			_progressTime    = config.ProgressTime;
 		}
 
 		public void Tick (float deltaTime)
@@ -35,9 +37,9 @@ namespace IdleCastle.Runtime.Gameplay
 
 				_incomeTimer %= _progressTime;
 
-				GeneratedIncome income = new(CurrencyId, Income * incomeMultiplier);
+				float income = Income * incomeMultiplier;
 
-				IncomeGenerated?.Invoke(income);
+				_incomePublisher.Publish(new IncomeGenerated(CurrencyId, income));
 			}
 		}
 	}

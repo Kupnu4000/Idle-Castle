@@ -1,11 +1,11 @@
-namespace IdleCastle.Runtime.Gameplay
+namespace IdleCastle.Runtime.Gameplay.Messages
 {
-	public readonly struct GeneratedIncome
+	public readonly struct IncomeGenerated
 	{
 		public readonly ItemId CurrencyId;
 		public readonly double Amount;
 
-		public GeneratedIncome (ItemId currencyId, double amount)
+		public IncomeGenerated (ItemId currencyId, double amount)
 		{
 			CurrencyId = currencyId;
 			Amount     = amount;

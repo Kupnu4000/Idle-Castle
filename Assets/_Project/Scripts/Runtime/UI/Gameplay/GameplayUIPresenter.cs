@@ -1,7 +1,10 @@
+using System;
 using System.Collections.Generic;
 using IdleCastle.Runtime.Gameplay;
+using IdleCastle.Runtime.Gameplay.Messages;
 using IdleCastle.Runtime.UI.Widgets;
 using JetBrains.Annotations;
+using MessagePipe;
 using Modules.UISystem;
 
 
@@ -16,8 +19,15 @@ namespace IdleCastle.Runtime.UI.Gameplay
 
 		private GameplayUIView _view;
 
-		public GameplayUIPresenter (GoldCurrencyConfig goldConfig)
+		private IDisposable _currencyAmountChanged;
+
+		public GameplayUIPresenter (
+			GoldCurrencyConfig goldConfig,
+			ISubscriber<CurrencyAmountChanged> currencyAmountChanged
+		)
 		{
+			_currencyAmountChanged = currencyAmountChanged.Subscribe(HandleCurrencyChanged);
+
 			_currencyConfigs = new Dictionary<ItemId, CurrencyConfig> {
 				[goldConfig.CurrencyId] = goldConfig
 			};
@@ -33,20 +43,26 @@ namespace IdleCastle.Runtime.UI.Gameplay
 			_view = view;
 		}
 
-		public void HandleCurrencyChanged (ItemId currencyId, double newValue)
+		private void HandleCurrencyChanged (CurrencyAmountChanged @event)
 		{
-			if (!_currencyWidgets.TryGetValue(currencyId, out CurrencyWidget widget))
+			if (!_currencyWidgets.TryGetValue(@event.CurrencyId, out CurrencyWidget widget))
 			{
 				widget = _view.CreateCurrencyWidget();
 
-				_currencyWidgets.Add(currencyId, widget);
+				_currencyWidgets.Add(@event.CurrencyId, widget);
 
-				widget.Initialize(_currencyConfigs[currencyId]);
+				widget.Initialize(_currencyConfigs[@event.CurrencyId]);
 			}
 
-			widget.SetValue(newValue);
+			widget.SetValue(@event.NewValue);
 		}
 
-		public void Dispose () {}
+		public void Dispose ()
+		{
+			_currencyAmountChanged?.Dispose();
+			_currencyAmountChanged = null;
+
+			_currencyWidgets.Clear();
+		}
 	}
 }

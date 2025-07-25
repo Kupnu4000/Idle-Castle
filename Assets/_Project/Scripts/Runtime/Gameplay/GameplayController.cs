@@ -1,6 +1,8 @@
 using System;
+using IdleCastle.Runtime.Gameplay.Messages;
 using IdleCastle.Runtime.UI.Gameplay;
 using JetBrains.Annotations;
+using MessagePipe;
 using Modules.UISystem;
 
 
@@ -10,37 +12,29 @@ namespace IdleCastle.Runtime.Gameplay
 	public class GameplayController : IDisposable
 	{
 		private readonly ScreenFacadeFactory _screenFacadeFactory; // TODO Refactor: это могла бы делать и IUISystem
-		private readonly BuildingManager     _buildingManager;
+		private readonly GameWorld           _gameWorld;
 
 		private GameplayUI _gameplayUI;
 
 		public GameplayController (
+			IPublisher<IncomeGenerated> incomePublisher,
 			ScreenFacadeFactory screenFacadeFactory,
-			BuildingManager buildingManager
+			GameWorld gameWorld
 		)
 		{
 			_screenFacadeFactory = screenFacadeFactory;
-			_buildingManager     = buildingManager;
+			_gameWorld           = gameWorld;
 		}
 
 		public void Initialize ()
 		{
 			_gameplayUI = _screenFacadeFactory.Create<GameplayUI>();
 
-			_buildingManager.CurrencyChanged += _gameplayUI.HandleCurrencyChanged;
-
-			_buildingManager.Create<GoldMine>();
-		}
-
-		public void Tick (float deltaTime)
-		{
-			_buildingManager.Tick(deltaTime);
+			_gameWorld.Create<GoldMine>();
 		}
 
 		public void Dispose ()
 		{
-			_buildingManager.CurrencyChanged -= _gameplayUI.HandleCurrencyChanged;
-
 			_gameplayUI.Dispose();
 			_gameplayUI = null;
 		}

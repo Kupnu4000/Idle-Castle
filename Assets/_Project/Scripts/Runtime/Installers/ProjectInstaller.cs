@@ -16,7 +16,8 @@ namespace IdleCastle.Runtime.Installers
 			Container.BindInterfacesTo<AppStatesSetup>().AsSingle();
 
 			Container.Bind<GenericFactory>()
-			         .AsSingle();
+			         .AsSingle()
+			         .MoveIntoAllSubContainers();
 
 			AppCoreInstaller.Install(Container);
 			AppEventsMonitorInstaller.Install(Container);

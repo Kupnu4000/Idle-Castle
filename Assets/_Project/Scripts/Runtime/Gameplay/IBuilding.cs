@@ -1,13 +1,8 @@
-using System;
-
-
 namespace IdleCastle.Runtime.Gameplay
 {
 	// TODO Refactor: rename это по идее IIncomeGenerator
 	public interface IBuilding
 	{
-		event Action<GeneratedIncome> IncomeGenerated;
-
 		ItemId Id         {get;}
 		ItemId CurrencyId {get;}
 

@@ -12,8 +12,8 @@ namespace IdleCastle.Runtime.AppCore.States
 	[UsedImplicitly]
 	public class GameplayState : IState<IAppStateController>
 	{
-		private readonly IUISystem           _uiSystem;
-		private readonly GameplayController  _gameplayController;
+		private readonly IUISystem          _uiSystem;
+		private readonly GameplayController _gameplayController;
 
 		public IAppStateController Context {get;}
 
@@ -23,9 +23,9 @@ namespace IdleCastle.Runtime.AppCore.States
 			GameplayController gameplayController
 		)
 		{
-			Context              = context;
-			_gameplayController  = gameplayController;
-			_uiSystem            = uiSystem;
+			Context             = context;
+			_gameplayController = gameplayController;
+			_uiSystem           = uiSystem;
 		}
 
 		public UniTask OnEnterAsync (CancellationToken cancellationToken = default)
@@ -44,10 +44,7 @@ namespace IdleCastle.Runtime.AppCore.States
 			return UniTask.CompletedTask;
 		}
 
-		public void Tick (float deltaTime)
-		{
-			_gameplayController.Tick(deltaTime);
-		}
+		public void Tick (float deltaTime) {}
 
 		public void Dispose () {}
 	}
