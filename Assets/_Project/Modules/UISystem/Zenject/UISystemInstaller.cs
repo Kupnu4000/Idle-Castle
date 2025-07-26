@@ -16,7 +16,8 @@ namespace Modules.UISystem.Zenject
 		public override void InstallBindings ()
 		{
 			Container.Bind<ScreenFacadeFactory>()
-			         .AsSingle();
+			         .AsSingle()
+			         .MoveIntoDirectSubContainers();
 
 			Container.Bind<UIRoot>()
 			         .FromComponentInNewPrefab(_uiRoot)

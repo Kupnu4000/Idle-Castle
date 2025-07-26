@@ -1,10 +1,10 @@
-using IdleCastle.Runtime.UI.Lobby;
 using JetBrains.Annotations;
 using Zenject;
 
 
 namespace IdleCastle.Runtime.Installers
 {
+	// TODO Refactor: this
 	[UsedImplicitly]
 	public class UIInstaller : Installer<UIInstaller>
 	{
@@ -13,7 +13,7 @@ namespace IdleCastle.Runtime.Installers
 			// TODO Refactor: тут приходится биндить презентеры.
 			// Возможно, создавать через фасадную фабрику или даже саму IUISystem будет лучше.
 
-			Container.Bind<LobbyScreenPresenter>().AsTransient();
+			// Container.Bind<LobbyScreenPresenter>().AsTransient();
 		}
 	}
 }
