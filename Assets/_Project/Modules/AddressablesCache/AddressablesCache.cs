@@ -110,12 +110,8 @@ namespace Modules.AddressablesCache
 		{
 			string guid = assetReference.AssetGUID;
 
-			if (!_assetCache.Remove(guid))
-				return;
-
-			_assetCache.Remove(guid, out OperationHandleDisposable handle);
-
-			handle.Dispose();
+			if (_assetCache.Remove(guid, out OperationHandleDisposable handle))
+				handle.Dispose();
 		}
 
 		public void UnloadAll ()
@@ -140,7 +136,7 @@ namespace Modules.AddressablesCache
 			if (_assetCache.TryGetValue(guid, out handle))
 				return false;
 
-			handle = OperationHandleDisposable.Create(assetReference);
+			handle = new OperationHandleDisposable(assetReference);
 
 			_assetCache[guid] = handle;
 

@@ -10,28 +10,18 @@ namespace Modules.AddressablesCache
 {
 	internal class OperationHandleDisposable : IDisposable
 	{
+		private readonly string _subObjectName;
+		private readonly string _assetGuid;
+
 		private AsyncOperationHandle _handle;
 
 		public Object Asset => (Object)_handle.Result;
 
-		private OperationHandleDisposable (AsyncOperationHandle handle)
+		public OperationHandleDisposable (AssetReference assetReference)
 		{
-			_handle = handle;
-		}
-
-		public static OperationHandleDisposable Create (AssetReference assetReference)
-		{
-			string guid = assetReference.AssetGUID;
-
-			AsyncOperationHandle handle = assetReference.LoadAssetAsync<Object>();
-
-			if (handle.Status == AsyncOperationStatus.Failed)
-			{
-				handle.Release();
-				throw new Exception($"Failed to load asset {assetReference.SubObjectName} with GUID: {guid}");
-			}
-
-			return new OperationHandleDisposable(handle);
+			_subObjectName = assetReference.SubObjectName;
+			_assetGuid     = assetReference.AssetGUID;
+			_handle        = assetReference.LoadAssetAsync<Object>();
 		}
 
 		private bool IsLoaded ()
@@ -45,6 +35,11 @@ namespace Modules.AddressablesCache
 				return;
 
 			await _handle.WithCancellation(cancellationToken);
+
+			if (_handle.Status == AsyncOperationStatus.Failed)
+			{
+				throw new Exception($"Failed to load asset {_subObjectName} with GUID: {_assetGuid}");
+			}
 		}
 
 		public void Dispose ()
