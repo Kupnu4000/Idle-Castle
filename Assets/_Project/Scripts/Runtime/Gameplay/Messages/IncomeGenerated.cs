@@ -13,7 +13,7 @@ namespace IdleCastle.Runtime.Gameplay.Messages
 
 		public override string ToString ()
 		{
-			return $"Generated [CurrencyId: {CurrencyId}, Amount: {Amount}]";
+			return $"Generated [Currency: {CurrencyId}, Amount: {Amount}]";
 		}
 	}
 }

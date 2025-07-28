@@ -49,7 +49,7 @@ namespace Modules.UISystem
 			cameraData.cameraStack.Add(_root.Camera);
 		}
 
-		public TScreen SpawnScreen<TScreen> () where TScreen : UIScreen
+		public UniTask<TScreen> SpawnScreen<TScreen> () where TScreen : UIScreen
 		{
 			UIScreen prototype = _prototypeProvider.GetScreenPrototype<TScreen>();
 			UIScreen screen    = _screenFactory.Create(prototype, _root.Canvas.transform);
@@ -58,10 +58,10 @@ namespace Modules.UISystem
 
 			screen.FadeIn();
 
-			return (TScreen)screen;
+			return UniTask.FromResult((TScreen)screen);
 		}
 
-		public TDialog SpawnDialog<TDialog> () where TDialog : UIDialog
+		public UniTask<TDialog> SpawnDialog<TDialog> () where TDialog : UIDialog
 		{
 			UIDialog prototype = _prototypeProvider.GetDialogPrototype<TDialog>();
 			UIDialog dialog    = _dialogFactory.Create(prototype, _root.Canvas.transform);
@@ -70,7 +70,7 @@ namespace Modules.UISystem
 
 			dialog.FadeIn();
 
-			return (TDialog)dialog;
+			return UniTask.FromResult((TDialog)dialog);
 		}
 
 		public UniTask FadeInAsync (float duration = 1)

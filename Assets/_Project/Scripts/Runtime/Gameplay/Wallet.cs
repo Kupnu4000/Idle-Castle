@@ -23,16 +23,16 @@ namespace IdleCastle.Runtime.Gameplay
 		{
 			_currencyAmountChanged = currencyAmountChanged;
 
-			_incomeGenerated = incomeGenerated.Subscribe(Add);
+			_incomeGenerated = incomeGenerated.Subscribe(HandleIncomeGenerated);
 		}
 
-		private void Add (IncomeGenerated income)
+		private void HandleIncomeGenerated (IncomeGenerated @event)
 		{
-			_currencies.TryAdd(income.CurrencyId, 0);
+			_currencies.TryAdd(@event.CurrencyId, 0);
 
-			_currencies[income.CurrencyId] += income.Amount;
+			_currencies[@event.CurrencyId] += @event.Amount;
 
-			_currencyAmountChanged.Publish(new CurrencyAmountChanged(income.CurrencyId, _currencies[income.CurrencyId]));
+			_currencyAmountChanged.Publish(new CurrencyAmountChanged(@event.CurrencyId, _currencies[@event.CurrencyId]));
 		}
 
 		public void Dispose ()

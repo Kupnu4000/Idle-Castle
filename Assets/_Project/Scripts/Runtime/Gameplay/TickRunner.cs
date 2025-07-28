@@ -5,10 +5,12 @@ using UnityEngine;
 
 namespace IdleCastle.Runtime.Gameplay
 {
+	// TODO: нужны ли тут длинные и короткие тики?
 	[UsedImplicitly]
 	public class TickRunner : MonoBehaviour, ITickRunner
 	{
 		public event Action<float> OnTick;
+		public event Action<float> OnLateTick;
 		public event Action        OnShortTick;
 		public event Action        OnLongTick;
 
@@ -25,7 +27,7 @@ namespace IdleCastle.Runtime.Gameplay
 			return new GameObject("Tick Runner").AddComponent<TickRunner>();
 		}
 
-		public void Update ()
+		private void Update ()
 		{
 			if (_isPaused) return;
 
@@ -53,6 +55,13 @@ namespace IdleCastle.Runtime.Gameplay
 
 				_longTickAccumulator %= LongTickInterval;
 			}
+		}
+
+		private void LateUpdate ()
+		{
+			if (_isPaused) return;
+
+			OnLateTick?.Invoke(Time.deltaTime);
 		}
 
 		public void Pause () => _isPaused = true;

@@ -1,10 +1,13 @@
 using System;
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
+using IdleCastle.Runtime.Extensions;
 using IdleCastle.Runtime.Gameplay;
 using IdleCastle.Runtime.Gameplay.Messages;
 using IdleCastle.Runtime.UI.Widgets;
 using JetBrains.Annotations;
 using MessagePipe;
+using Modules.AddressablesCache;
 using Modules.UISystem;
 
 
@@ -12,21 +15,28 @@ namespace IdleCastle.Runtime.UI.Gameplay
 {
 	// TODO Refactor: иконки берём из таблички, именуем item:gold_ore
 	[UsedImplicitly]
-	public class GameplayUIPresenter : IScreenPresenter<GameplayUIView>
+	public class GameplayUIPresenter : IUIPresenter<GameplayUIView>
 	{
 		private readonly Dictionary<ItemId, CurrencyWidget> _currencyWidgets = new();
+		private readonly Dictionary<ItemId, BuildingWidget> _buildingWidgets = new();
 		private readonly Dictionary<ItemId, CurrencyConfig> _currencyConfigs;
+		private readonly UIFacadeFactory                    _uiFacadeFactory;
+		private readonly CompositeDisposable                _disposables = new();
 
 		private GameplayUIView _view;
 
-		private IDisposable _currencyAmountChanged;
-
+		// TODO: cleanup
 		public GameplayUIPresenter (
 			GoldCurrencyConfig goldConfig,
-			ISubscriber<CurrencyAmountChanged> currencyAmountChanged
+			ISubscriber<BuildingCreated> buildingCreated,
+			ISubscriber<CurrencyAmountChanged> currencyAmountChanged,
+			UIFacadeFactory uiFacadeFactory
 		)
 		{
-			_currencyAmountChanged = currencyAmountChanged.Subscribe(HandleCurrencyChanged);
+			_uiFacadeFactory = uiFacadeFactory;
+
+			buildingCreated.Subscribe(HandleBuildingCreated).AddTo(_disposables);
+			currencyAmountChanged.Subscribe(HandleCurrencyChanged).AddTo(_disposables);
 
 			_currencyConfigs = new Dictionary<ItemId, CurrencyConfig> {
 				[goldConfig.CurrencyId] = goldConfig
@@ -35,7 +45,7 @@ namespace IdleCastle.Runtime.UI.Gameplay
 			// TODO: optimize
 			// _currencyConfigs = configs.Where(static config => config is CurrencyConfig)
 			//                           .Cast<CurrencyConfig>()
-			//                           .ToDictionary(static config => config.CurrencyId);
+			//                           .ToDictionary(static config => config.BuildingId);
 		}
 
 		public void Initialize (GameplayUIView view)
@@ -43,24 +53,41 @@ namespace IdleCastle.Runtime.UI.Gameplay
 			_view = view;
 		}
 
-		private void HandleCurrencyChanged (CurrencyAmountChanged @event)
+		private void HandleBuildingCreated (BuildingCreated message)
 		{
-			if (!_currencyWidgets.TryGetValue(@event.CurrencyId, out CurrencyWidget widget))
+			Impl(message.Building).Forget();
+			return;
+
+			async UniTask Impl (IBuilding building)
+			{
+				if (_buildingWidgets.ContainsKey(building.Id))
+					throw new InvalidOperationException($"Building widget for {building.Id} already exists.");
+
+				BuildingWidget widget = await _uiFacadeFactory.Create<BuildingWidget>(_view.BuildingProgressMeterRoot);
+
+				widget.SetBuilding(building);
+
+				_buildingWidgets.Add(building.Id, widget);
+			}
+		}
+
+		private void HandleCurrencyChanged (CurrencyAmountChanged message)
+		{
+			if (!_currencyWidgets.TryGetValue(message.CurrencyId, out CurrencyWidget widget))
 			{
 				widget = _view.CreateCurrencyWidget();
 
-				_currencyWidgets.Add(@event.CurrencyId, widget);
+				_currencyWidgets.Add(message.CurrencyId, widget);
 
-				widget.Initialize(_currencyConfigs[@event.CurrencyId]);
+				widget.Initialize(_currencyConfigs[message.CurrencyId]);
 			}
 
-			widget.SetValue(@event.NewValue);
+			widget.SetValue(message.NewValue);
 		}
 
 		public void Dispose ()
 		{
-			_currencyAmountChanged?.Dispose();
-			_currencyAmountChanged = null;
+			_disposables.Dispose();
 
 			_currencyWidgets.Clear();
 		}

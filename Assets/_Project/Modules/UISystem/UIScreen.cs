@@ -9,7 +9,7 @@ namespace Modules.UISystem
 	[PublicAPI]
 	[DisallowMultipleComponent]
 	[RequireComponent(typeof(CanvasGroup))]
-	public abstract class UIScreen : MonoBehaviour
+	public abstract class UIScreen : MonoBehaviour, IUIView
 	{
 		[SerializeField, Min(float.Epsilon)] private float _fadeDuration = 0.25f;
 

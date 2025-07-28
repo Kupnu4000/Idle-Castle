@@ -13,8 +13,8 @@ namespace Modules.UISystem.Interfaces
 
 		void AttachToMainCamera ();
 
-		TScreen SpawnScreen<TScreen> () where TScreen : UIScreen;
-		TDialog SpawnDialog<TDialog> () where TDialog : UIDialog;
+		UniTask<TScreen> SpawnScreen<TScreen> () where TScreen : UIScreen;
+		UniTask<TDialog> SpawnDialog<TDialog> () where TDialog : UIDialog;
 
 		UniTask FadeInAsync (float duration = 1);
 		UniTask FadeOutAsync (float duration = 1);

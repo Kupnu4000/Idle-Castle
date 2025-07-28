@@ -11,6 +11,10 @@ TODO:
 [ ] оптимизировать юайки отдельными канвасами
 [ ] смена сезонов
 
+https://sketchfab.com/3d-models/stylized-castle-and-landscape-858dedb5283e4d209abe76a6d904fb83
+https://sketchfab.com/3d-models/medieval-castle-walls-constructor-6d8be3974d7441718999e67b7801e4bf
+https://sketchfab.com/3d-models/castle-224df50cca6e4e1e9e9494ce3b06b4cc
+https://sketchfab.com/3d-models/human-castle-8f1f7578070d4ac9aa09c8a50f922953
 
 UI:
 [ ] виджет дохода, на котором видно какие именно ресурсы добываются \ крафтятся
@@ -75,5 +79,6 @@ MONETIZATION:
 MISC:
 [ ] название компании в настройках проекта
 [ ] иконка
+[ ] проанализировать на утечки памяти в рантайме (UniTask \ Addressables)
 [ ] вынести модули из _Project/Modules в пакеты
 [ ] Support by crediting 'Kenney' or 'www.kenney.nl' (this is not a requirement)

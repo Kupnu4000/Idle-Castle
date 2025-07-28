@@ -1,8 +1,6 @@
 using IdleCastle.Runtime.Gameplay;
-using IdleCastle.Runtime.Gameplay.Messages;
-using IdleCastle.Runtime.UI.Gameplay;
 using JetBrains.Annotations;
-using MessagePipe;
+using Modules.AddressablesCache;
 using Zenject;
 
 
@@ -13,7 +11,7 @@ namespace IdleCastle.Runtime.Installers
 	{
 		public override void InstallBindings ()
 		{
-			BindMessagePipe();
+			GameplayMessagePipeInstaller.Install(Container);
 
 			Container.Bind<ITickRunner>()
 			         .To<TickRunner>()
@@ -21,18 +19,13 @@ namespace IdleCastle.Runtime.Installers
 			         .AsSingle()
 			         .NonLazy();
 
-			Container.Bind<GameplayUIPresenter>().AsSingle();
+			Container.Bind<Wallet>()
+			         .AsSingle()
+			         .NonLazy();
+
+			Container.Bind<AddressablesCache>().AsSingle();
 			Container.Bind<GameplayController>().AsSingle();
-			Container.Bind<Wallet>().AsSingle();
 			Container.Bind<GameWorld>().AsSingle();
-		}
-
-		private void BindMessagePipe ()
-		{
-			MessagePipeOptions options = Container.BindMessagePipe();
-
-			Container.BindMessageBroker<IncomeGenerated>(options);
-			Container.BindMessageBroker<CurrencyAmountChanged>(options);
 		}
 	}
 }

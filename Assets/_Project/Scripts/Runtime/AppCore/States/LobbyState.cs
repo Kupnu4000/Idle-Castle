@@ -13,7 +13,8 @@ namespace IdleCastle.Runtime.AppCore.States
 	[UsedImplicitly]
 	public class LobbyState : IState<IAppStateController>
 	{
-		private readonly IUISystem _uiSystem;
+		private readonly IUISystem       _uiSystem;
+		private readonly UIFacadeFactory _uiFacadeFactory; // TODO Refactor: это может делать и IUISystem, а не UIFacadeFactory
 
 		private LobbyScreen _lobbyScreen;
 
@@ -22,19 +23,19 @@ namespace IdleCastle.Runtime.AppCore.States
 		public LobbyState (
 			IAppStateController context,
 			IUISystem uiSystem,
-			ScreenFacadeFactory screenFacadeFactory
+			UIFacadeFactory uiFacadeFactory
 		)
 		{
-			Context      = context;
-			_uiSystem    = uiSystem;
-			_lobbyScreen = screenFacadeFactory.Create<LobbyScreen>();
+			Context          = context;
+			_uiSystem        = uiSystem;
+			_uiFacadeFactory = uiFacadeFactory;
 		}
 
-		public UniTask OnEnterAsync (CancellationToken cancellationToken = default)
+		public async UniTask OnEnterAsync (CancellationToken cancellationToken = default)
 		{
 			_uiSystem.AttachToMainCamera();
 
-			return UniTask.CompletedTask;
+			_lobbyScreen = await _uiFacadeFactory.Create<LobbyScreen>(_uiSystem.Canvas.transform);
 		}
 
 		public UniTask OnExitAsync (CancellationToken cancellationToken = default)

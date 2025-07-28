@@ -1,4 +1,3 @@
-using IdleCastle.Runtime.Gameplay;
 using JetBrains.Annotations;
 using Zenject;
 
@@ -15,9 +14,9 @@ namespace IdleCastle.Runtime.Zenject
 			_instantiator = instantiator;
 		}
 
-		public TBuilding Create<TBuilding> () where TBuilding : IBuilding
+		public T Create<T> ()
 		{
-			return _instantiator.Instantiate<TBuilding>();
+			return _instantiator.Instantiate<T>();
 		}
 	}
 }

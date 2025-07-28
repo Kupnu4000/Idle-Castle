@@ -12,6 +12,13 @@ namespace IdleCastle.Runtime.UI.Gameplay
 		[SerializeField] private Transform _currencyWidgetRoot;
 		[SerializeField] private CurrencyWidget _currencyWidget;
 
+		[Space]
+		[SerializeField] private Transform _buildingProgressMeterRoot;
+		[SerializeField] private BuildingWidgetView _buildingWidgetView;
+
+		public Transform BuildingProgressMeterRoot => _buildingProgressMeterRoot;
+
+		// TODO Refactor: тут сделать по аналогии с BuildingProgressMeter
 		public CurrencyWidget CreateCurrencyWidget ()
 		{
 			return Instantiate(_currencyWidget, _currencyWidgetRoot);

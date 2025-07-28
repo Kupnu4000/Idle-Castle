@@ -24,28 +24,27 @@ namespace IdleCastle.Runtime.AppCore.States
 		)
 		{
 			Context             = context;
-			_gameplayController = gameplayController;
 			_uiSystem           = uiSystem;
+			_gameplayController = gameplayController;
 		}
 
-		public UniTask OnEnterAsync (CancellationToken cancellationToken = default)
+		public async UniTask OnEnterAsync (CancellationToken cancellationToken = default)
 		{
 			_uiSystem.AttachToMainCamera();
 
-			_gameplayController.Initialize();
-
-			return UniTask.CompletedTask;
+			await _gameplayController.Initialize();
 		}
 
 		public UniTask OnExitAsync (CancellationToken cancellationToken = default)
 		{
-			_gameplayController.Dispose();
-
 			return UniTask.CompletedTask;
 		}
 
 		public void Tick (float deltaTime) {}
 
-		public void Dispose () {}
+		public void Dispose ()
+		{
+			_gameplayController.Dispose();
+		}
 	}
 }

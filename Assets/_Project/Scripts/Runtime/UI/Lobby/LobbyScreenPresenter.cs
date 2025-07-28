@@ -6,7 +6,7 @@ using Modules.UISystem;
 namespace IdleCastle.Runtime.UI.Lobby
 {
 	[UsedImplicitly]
-	public class LobbyScreenPresenter : IScreenPresenter<LobbyScreenView>
+	public class LobbyScreenPresenter : IUIPresenter<LobbyScreenView>
 	{
 		private LobbyScreenView _view;
 
@@ -24,7 +24,6 @@ namespace IdleCastle.Runtime.UI.Lobby
 
 		public void Dispose ()
 		{
-			// _view.SettingsButtonClicked.RemoveAllListeners();
 			_view.PlayButtonClicked.RemoveAllListeners();
 
 			_view = null;
