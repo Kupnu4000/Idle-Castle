@@ -8,6 +8,7 @@ using MessagePipe;
 
 namespace IdleCastle.Runtime.Gameplay
 {
+	// this has to be a model of the game world
 	[UsedImplicitly]
 	public class GameWorld : IDisposable
 	{
