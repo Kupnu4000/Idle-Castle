@@ -15,7 +15,7 @@ namespace IdleCastle.Runtime.Installers
 
 			Container
 				.BindMessageBroker<BuildingCreated>(options)
-				.BindMessageBroker<IncomeGenerated>(options)
+				.BindMessageBroker<CurrencyGenerated>(options)
 				.BindMessageBroker<CurrencyAmountChanged>(options);
 		}
 	}

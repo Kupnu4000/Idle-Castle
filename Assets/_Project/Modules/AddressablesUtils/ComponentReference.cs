@@ -8,7 +8,7 @@ using Object = UnityEngine.Object;
 
 
 // TODO Refactor: move to Modules.AddressablesUtils
-namespace Modules.AddressablesCache
+namespace Modules.AddressablesUtils
 {
 	[PublicAPI]
 	[Serializable]

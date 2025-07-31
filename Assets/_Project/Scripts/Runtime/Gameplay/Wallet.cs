@@ -12,27 +12,27 @@ namespace IdleCastle.Runtime.Gameplay
 	{
 		private readonly Dictionary<ItemId, double> _currencies = new();
 
-		private readonly IPublisher<CurrencyAmountChanged> _currencyAmountChanged;
+		private readonly IPublisher<CurrencyAmountChanged> _currencyAmountChangedPub;
 
 		private IDisposable _incomeGenerated;
 
 		public Wallet (
-			IPublisher<CurrencyAmountChanged> currencyAmountChanged,
-			ISubscriber<IncomeGenerated> incomeGenerated
+			IPublisher<CurrencyAmountChanged> currencyAmountChangedPub,
+			ISubscriber<CurrencyGenerated> currencyGeneratedSub
 		)
 		{
-			_currencyAmountChanged = currencyAmountChanged;
+			_currencyAmountChangedPub = currencyAmountChangedPub;
 
-			_incomeGenerated = incomeGenerated.Subscribe(HandleIncomeGenerated);
+			_incomeGenerated = currencyGeneratedSub.Subscribe(HandleIncomeGenerated);
 		}
 
-		private void HandleIncomeGenerated (IncomeGenerated @event)
+		private void HandleIncomeGenerated (CurrencyGenerated @event)
 		{
 			_currencies.TryAdd(@event.CurrencyId, 0);
 
 			_currencies[@event.CurrencyId] += @event.Amount;
 
-			_currencyAmountChanged.Publish(new CurrencyAmountChanged(@event.CurrencyId, _currencies[@event.CurrencyId]));
+			_currencyAmountChangedPub.Publish(new CurrencyAmountChanged(@event.CurrencyId, _currencies[@event.CurrencyId]));
 		}
 
 		public void Dispose ()

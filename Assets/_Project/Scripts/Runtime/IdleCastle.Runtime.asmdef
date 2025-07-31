@@ -10,7 +10,7 @@
         "Zenject",
         "MessagePipe",
         "MessagePipe.Zenject",
-        "Modules.AddressablesCache",
+        "Modules.AddressablesUtils",
         "Modules.AppCore",
         "Modules.AppCore.Zenject",
         "Modules.ApplicationEvents.Zenject",

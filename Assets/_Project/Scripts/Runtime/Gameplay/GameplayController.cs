@@ -1,11 +1,10 @@
 using System;
 using Cysharp.Threading.Tasks;
 using IdleCastle.Runtime.Configs;
-using IdleCastle.Runtime.Gameplay.Messages;
+using IdleCastle.Runtime.Gameplay.Buildings;
 using IdleCastle.Runtime.UI.Gameplay;
 using JetBrains.Annotations;
-using MessagePipe;
-using Modules.AddressablesCache;
+using Modules.AddressablesUtils;
 using Modules.UISystem;
 using Modules.UISystem.Interfaces;
 
@@ -25,7 +24,6 @@ namespace IdleCastle.Runtime.Gameplay
 		private IDisposable _loadedAssets;
 
 		public GameplayController (
-			IPublisher<IncomeGenerated> incomePublisher,
 			UIFacadeFactory screenFacadeFactory,
 			GameWorld gameWorld,
 			IUISystem uiSystem,

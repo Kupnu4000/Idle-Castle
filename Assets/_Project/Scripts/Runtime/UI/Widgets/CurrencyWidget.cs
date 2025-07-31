@@ -1,4 +1,4 @@
-using IdleCastle.Runtime.Gameplay;
+using IdleCastle.Runtime.Gameplay.Currencies;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;

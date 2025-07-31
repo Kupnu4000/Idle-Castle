@@ -6,7 +6,7 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using Object = UnityEngine.Object;
 
 
-namespace Modules.AddressablesCache
+namespace Modules.AddressablesUtils
 {
 	internal class OperationHandleDisposable : IDisposable
 	{

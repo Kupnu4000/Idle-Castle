@@ -1,5 +1,5 @@
 using System;
-using Modules.AddressablesCache;
+using Modules.AddressablesUtils;
 
 
 namespace IdleCastle.Runtime.Extensions

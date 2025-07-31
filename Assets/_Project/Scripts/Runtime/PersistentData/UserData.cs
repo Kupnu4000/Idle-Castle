@@ -18,7 +18,7 @@ namespace IdleCastle.Runtime.PersistentData
 
 		public bool TryLoad ()
 		{
-			// TODO Refactor: это можно делать в FilePersistenceHandler
+			// TODO Refactor: использовать здесь метод TryLoadInto из FilePersistenceHandlerExtensions
 			if (FilePersistenceHandler.TryLoad(FilePath, out string data) == false)
 			{
 				return false;

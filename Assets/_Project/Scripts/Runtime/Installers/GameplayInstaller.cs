@@ -1,6 +1,6 @@
 using IdleCastle.Runtime.Gameplay;
 using JetBrains.Annotations;
-using Modules.AddressablesCache;
+using Modules.AddressablesUtils;
 using Zenject;
 
 

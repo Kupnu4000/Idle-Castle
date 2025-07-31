@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using IdleCastle.Runtime.Extensions;
 using IdleCastle.Runtime.Gameplay;
+using IdleCastle.Runtime.Gameplay.Currencies;
 using IdleCastle.Runtime.Gameplay.Messages;
 using IdleCastle.Runtime.UI.Widgets;
 using JetBrains.Annotations;
 using MessagePipe;
-using Modules.AddressablesCache;
+using Modules.AddressablesUtils;
 using Modules.UISystem;
 
 

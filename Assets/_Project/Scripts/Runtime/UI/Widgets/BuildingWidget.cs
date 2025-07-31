@@ -3,7 +3,7 @@ using IdleCastle.Runtime.Configs;
 using IdleCastle.Runtime.Gameplay;
 using IdleCastle.Runtime.Zenject;
 using JetBrains.Annotations;
-using Modules.AddressablesCache;
+using Modules.AddressablesUtils;
 using Modules.UISystem;
 using UnityEngine;
 

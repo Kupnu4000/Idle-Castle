@@ -5,7 +5,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine.AddressableAssets;
 
 
-namespace Modules.AddressablesCache
+namespace Modules.AddressablesUtils
 {
 	internal class AssetLoadingGroupBuilder : ILoadingGroupBuilder
 	{

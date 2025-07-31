@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 
 
-namespace Modules.AddressablesCache
+namespace Modules.AddressablesUtils
 {
 	public class CompositeDisposable : IDisposable
 	{

@@ -4,7 +4,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine.AddressableAssets;
 
 
-namespace Modules.AddressablesCache
+namespace Modules.AddressablesUtils
 {
 	public interface ILoadingGroupBuilder
 	{

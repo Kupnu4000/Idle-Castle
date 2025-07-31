@@ -4,9 +4,8 @@ using MessagePipe;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.Gameplay
+namespace IdleCastle.Runtime.Gameplay.Buildings
 {
-	// TODO Refactor: может передавать конфиг в конструктор, а экземпляр класса создавать в фабрике?
 	[UsedImplicitly]
 	public class GoldMine : IBuilding
 	{
@@ -18,17 +17,17 @@ namespace IdleCastle.Runtime.Gameplay
 
 		private float _productionProgress;
 
-		private readonly IPublisher<IncomeGenerated> _incomePublisher;
+		private readonly IPublisher<CurrencyGenerated> _currencyGeneratedPub;
 
 		public float NormalizedProgress =>
 			Mathf.Clamp01(_productionProgress / _productionTime);
 
 		private const float Income = 1f; // TODO Refactor: это надо хранить в конфиге
 
-		public GoldMine (GoldMineConfig config, IPublisher<IncomeGenerated> incomePublisher)
+		public GoldMine (GoldMineConfig config, IPublisher<CurrencyGenerated> currencyGeneratedPub)
 		{
-			_incomePublisher = incomePublisher;
-			_productionTime  = config.ProgressTime;
+			_currencyGeneratedPub = currencyGeneratedPub;
+			_productionTime       = config.ProgressTime;
 		}
 
 		public void Tick (float deltaTime)
@@ -43,7 +42,7 @@ namespace IdleCastle.Runtime.Gameplay
 
 				float income = Income * incomeMultiplier;
 
-				_incomePublisher.Publish(new IncomeGenerated(CurrencyId, income));
+				_currencyGeneratedPub.Publish(new CurrencyGenerated(CurrencyId, income));
 			}
 		}
 	}

@@ -1,6 +1,6 @@
 {
-    "name": "Modules.AddressablesCache",
-    "rootNamespace": "Modules.AddressablesCache",
+    "name": "Modules.AddressablesUtils",
+    "rootNamespace": "Modules.AddressablesUtils",
     "references": [
         "Unity.Addressables",
         "UniTask",

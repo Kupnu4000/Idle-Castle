@@ -1,6 +1,6 @@
 using IdleCastle.Runtime.UI.Widgets;
 using IdleCastle.Runtime.Utilities;
-using Modules.AddressablesCache;
+using Modules.AddressablesUtils;
 using Modules.Configs;
 using UnityEngine;
 

@@ -8,7 +8,7 @@ using UnityEngine.AddressableAssets;
 using Object = UnityEngine.Object;
 
 
-namespace Modules.AddressablesCache
+namespace Modules.AddressablesUtils
 {
 	[PublicAPI]
 	public class AddressablesCache : IDisposable
