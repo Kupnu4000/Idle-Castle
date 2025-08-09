@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d37ea034004c0484954dd02b832e9d, type: 3}
   m_Name: Gameplay Configs Installer
   m_EditorClassIdentifier: 
-  _currencies: []
-  _buildings: []
+  _currencies:
+  - {fileID: 11400000, guid: 87fcc5478b0980f47a7bd0e33d43eb94, type: 2}
+  _buildings:
+  - {fileID: 11400000, guid: 26c3db31a25bf3041a622e2abfc9f333, type: 2}

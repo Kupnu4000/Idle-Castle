@@ -1,4 +1,4 @@
-namespace IdleCastle.Runtime.Gameplay.Messages
+namespace IdleCastle.Runtime.Gameplay.GameEvents
 {
 	public readonly struct CurrencyAmountChanged
 	{

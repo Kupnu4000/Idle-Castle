@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
-using IdleCastle.Runtime.Gameplay.Messages;
+using IdleCastle.Runtime.Gameplay.Buildings;
+using IdleCastle.Runtime.Gameplay.GameEvents;
 using IdleCastle.Runtime.Zenject;
 using JetBrains.Annotations;
 using MessagePipe;

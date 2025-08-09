@@ -7,8 +7,11 @@ namespace IdleCastle.Runtime.Gameplay
 	{
 		event Action<float> OnTick;
 		event Action<float> OnLateTick;
-		event Action        OnShortTick; // TODO: remove?
-		event Action        OnLongTick;  // TODO: remove?
+		event Action<ulong> OnShortTick; // TODO: remove?
+		event Action<ulong> OnLongTick;  // TODO: remove?
+
+		ulong ShortTicks {get;}
+		ulong LongTicks  {get;}
 
 		void Pause ();
 		void Resume ();

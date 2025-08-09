@@ -1,4 +1,5 @@
 using IdleCastle.Runtime.Gameplay;
+using IdleCastle.Runtime.Gameplay.Buildings;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using UnityEngine;

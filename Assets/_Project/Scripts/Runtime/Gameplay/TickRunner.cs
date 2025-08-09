@@ -1,4 +1,5 @@
 using System;
+using IdleCastle.Runtime.Extensions;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -11,8 +12,8 @@ namespace IdleCastle.Runtime.Gameplay
 	{
 		public event Action<float> OnTick;
 		public event Action<float> OnLateTick;
-		public event Action        OnShortTick;
-		public event Action        OnLongTick;
+		public event Action<ulong> OnShortTick;
+		public event Action<ulong> OnLongTick;
 
 		private const float ShortTickInterval = 0.1f;
 		private const float LongTickInterval  = 1.0f;
@@ -21,6 +22,9 @@ namespace IdleCastle.Runtime.Gameplay
 		private float _longTickAccumulator;
 
 		private bool _isPaused;
+
+		public ulong ShortTicks {get; private set;}
+		public ulong LongTicks  {get; private set;}
 
 		public static TickRunner Create ()
 		{
@@ -38,22 +42,24 @@ namespace IdleCastle.Runtime.Gameplay
 
 			if (_shortTickAccumulator >= ShortTickInterval)
 			{
-				int shortTicks = (int)(_shortTickAccumulator / ShortTickInterval);
+				int shortTicks = _shortTickAccumulator.DivRem(ShortTickInterval, out _shortTickAccumulator);
 
 				for (int i = 0; i < shortTicks; i++)
-					OnShortTick?.Invoke();
-
-				_shortTickAccumulator %= ShortTickInterval;
+				{
+					ShortTicks++;
+					OnShortTick?.Invoke(ShortTicks);
+				}
 			}
 
 			if (_longTickAccumulator >= LongTickInterval)
 			{
-				int longTicks = (int)(_longTickAccumulator / LongTickInterval);
+				int longTicks = _longTickAccumulator.DivRem(LongTickInterval, out _longTickAccumulator);
 
 				for (int i = 0; i < longTicks; i++)
-					OnLongTick?.Invoke();
-
-				_longTickAccumulator %= LongTickInterval;
+				{
+					LongTicks++;
+					OnLongTick?.Invoke(LongTicks);
+				}
 			}
 		}
 

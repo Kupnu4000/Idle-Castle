@@ -29,9 +29,9 @@ MonoBehaviour:
     m_ConfigSource: 0
   - m_Id: scoped:project:Modules
     m_Name: Modules
-    m_Url: http://44.203.70.215:4873
+    m_Url: http://18.212.63.248:4873
     m_Scopes:
-    - com.multicast
+    - com.kdev
     m_IsDefault: 0
     m_Capabilities: 0
     m_ConfigSource: 4
@@ -40,6 +40,6 @@ MonoBehaviour:
   m_RegistryInfoDraft:
     m_Modified: 0
     m_ErrorMessage: 
-    m_UserModificationsInstanceId: -898
-    m_OriginalInstanceId: -900
+    m_UserModificationsInstanceId: -876
+    m_OriginalInstanceId: -880
   m_LoadAssets: 0

@@ -2,19 +2,23 @@
   "dependencies": {
     "com.cysharp.messagepipe": "https://github.com/Cysharp/MessagePipe.git?path=src/MessagePipe.Unity/Assets/Plugins/MessagePipe",
     "com.cysharp.messagepipe.zenject": "https://github.com/Cysharp/MessagePipe.git?path=src/MessagePipe.Unity/Assets/Plugins/MessagePipe.Zenject",
-    "com.multicast.app-core": "1.0.1",
-    "com.multicast.app-events": "1.0.0",
-    "com.multicast.app-version": "1.0.0",
-    "com.multicast.bootstrap": "1.1.0",
-    "com.multicast.configs": "1.0.0",
-    "com.multicast.currencies": "1.1.0",
-    "com.multicast.editor_tools": "1.0.0",
-    "com.multicast.input_handler": "1.0.0",
-    "com.multicast.mediator": "1.0.0",
-    "com.multicast.persistence": "1.0.0",
-    "com.multicast.third-party.zenject": "9.2.0",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.kdev.modules.app-core": "1.0.0",
+    "com.kdev.modules.app-events": "1.0.0",
+    "com.kdev.modules.app-version": "1.0.0",
+    "com.kdev.modules.bootstrap": "1.0.0",
+    "com.kdev.modules.configs": "1.0.0",
+    "com.kdev.modules.currencies": "1.0.0",
+    "com.kdev.modules.editor-tools": "1.0.0",
+    "com.kdev.modules.favourites": "1.0.1",
+    "com.kdev.modules.input-handler": "1.0.0",
+    "com.kdev.modules.mediator": "1.0.0",
+    "com.kdev.modules.persistence": "1.0.0",
+    "com.kdev.modules.playerprefs-values": "1.0.0",
+    "com.kdev.modules.state-machine": "1.0.0",
     "com.unity.2d.sprite": "1.0.0",
-    "com.unity.addressables": "2.5.0",
+    "com.unity.2d.tilemap": "1.0.0",
+    "com.unity.addressables": "2.6.0",
     "com.unity.ide.rider": "3.0.36",
     "com.unity.ide.visualstudio": "2.0.23",
     "com.unity.inputsystem": "1.14.1",
@@ -57,9 +61,9 @@
   "scopedRegistries": [
     {
       "name": "Modules",
-      "url": "http://44.203.70.215:4873",
+      "url": "http://18.212.63.248:4873",
       "scopes": [
-        "com.multicast"
+        "com.kdev"
       ]
     }
   ]

@@ -1,7 +1,7 @@
-using IdleCastle.Runtime.Gameplay.Messages;
+using IdleCastle.Runtime.Extensions;
+using IdleCastle.Runtime.Gameplay.GameEvents;
 using JetBrains.Annotations;
 using MessagePipe;
-using UnityEngine;
 
 
 namespace IdleCastle.Runtime.Gameplay.Buildings
@@ -19,8 +19,7 @@ namespace IdleCastle.Runtime.Gameplay.Buildings
 
 		private readonly IPublisher<CurrencyGenerated> _currencyGeneratedPub;
 
-		public float NormalizedProgress =>
-			Mathf.Clamp01(_productionProgress / _productionTime);
+		public float NormalizedProgress => _productionProgress.Normalized(_productionTime);
 
 		private const float Income = 1f; // TODO Refactor: это надо хранить в конфиге
 

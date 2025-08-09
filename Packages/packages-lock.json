@@ -14,6 +14,108 @@
       "dependencies": {},
       "hash": "5ebaa0405ddaa67856d938d1a1d86bf064f6f963"
     },
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f213ff497e4ff462a77319cf677cf20cc0860ca9"
+    },
+    "com.kdev.modules.app-core": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.kdev.modules.state-machine": "1.0.0"
+      },
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.app-events": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.app-version": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.bootstrap": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.configs": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.currencies": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.editor-tools": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.nuget.newtonsoft-json": "3.2.1"
+      },
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.favourites": {
+      "version": "1.0.1",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.input-handler": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.mediator": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.persistence": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.playerprefs-values": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.modules.state-machine": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
     "com.lunawolfstudios.scriptablesheets": {
       "version": "file:com.lunawolfstudios.scriptablesheets",
       "depth": 0,
@@ -23,116 +125,23 @@
         "com.unity.test-framework": "1.1.33"
       }
     },
-    "com.multicast.app-core": {
-      "version": "1.0.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.multicast.state-machine": "1.0.0",
-        "com.multicast.third-party.unitask": "2.5.10"
-      },
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.app-events": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.app-version": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.bootstrap": {
-      "version": "1.1.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.multicast.third-party.unitask": "2.5.10"
-      },
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.configs": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.currencies": {
-      "version": "1.1.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.editor_tools": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.unity.nuget.newtonsoft-json": "3.2.1"
-      },
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.input_handler": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.mediator": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {
-        "com.multicast.third-party.unitask": "2.5.10"
-      },
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.persistence": {
-      "version": "1.0.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.state-machine": {
-      "version": "1.0.0",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {
-        "com.multicast.third-party.unitask": "2.5.10"
-      },
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.third-party.unitask": {
-      "version": "2.5.10",
-      "depth": 1,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
-    "com.multicast.third-party.zenject": {
-      "version": "9.2.0",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://44.203.70.215:4873"
-    },
     "com.unity.2d.sprite": {
       "version": "1.0.0",
       "depth": 0,
       "source": "builtin",
       "dependencies": {}
     },
+    "com.unity.2d.tilemap": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.modules.tilemap": "1.0.0",
+        "com.unity.modules.uielements": "1.0.0"
+      }
+    },
     "com.unity.addressables": {
-      "version": "2.5.0",
+      "version": "2.6.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -148,7 +157,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.burst": {
-      "version": "1.8.21",
+      "version": "1.8.23",
       "depth": 2,
       "source": "registry",
       "dependencies": {

@@ -8,7 +8,7 @@ namespace IdleCastle.Runtime.Extensions
 {
 	public static class FilePersistenceHandlerExtensions
 	{
-		public static bool TryLoadInto<T> (this FilePersistenceHandler handler, string filePath, T target) where T : class
+		public static bool TryLoadJsonInto<T> (this FilePersistenceHandler handler, string filePath, T target) where T : class
 		{
 			// TODO Refactor: когда заберу нормальные версии модулей, можно будет использовать здесь инстанс хендлера
 			if (FilePersistenceHandler.TryLoad(filePath, out string data) == false)

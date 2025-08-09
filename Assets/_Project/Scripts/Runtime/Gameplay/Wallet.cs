@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using IdleCastle.Runtime.Gameplay.Messages;
+using IdleCastle.Runtime.Gameplay.GameEvents;
 using JetBrains.Annotations;
 using MessagePipe;
 

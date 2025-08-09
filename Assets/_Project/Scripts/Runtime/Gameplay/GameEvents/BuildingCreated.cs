@@ -1,4 +1,7 @@
-namespace IdleCastle.Runtime.Gameplay.Messages
+using IdleCastle.Runtime.Gameplay.Buildings;
+
+
+namespace IdleCastle.Runtime.Gameplay.GameEvents
 {
 	public readonly struct BuildingCreated
 	{

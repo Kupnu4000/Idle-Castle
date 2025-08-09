@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using IdleCastle.Runtime.Configs;
 using IdleCastle.Runtime.Gameplay;
+using IdleCastle.Runtime.Gameplay.Buildings;
 using IdleCastle.Runtime.Zenject;
 using JetBrains.Annotations;
 using Modules.AddressablesUtils;
