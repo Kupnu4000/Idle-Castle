@@ -74,11 +74,12 @@ namespace IdleCastle.Runtime.Gameplay
 
 		public void Resume () => _isPaused = false;
 
-		public void Dispose ()
-		{
-			OnTick      = null;
-			OnShortTick = null;
-			OnLongTick  = null;
-		}
-	}
+                public void Dispose ()
+                {
+                        OnTick      = null;
+                        OnLateTick  = null;
+                        OnShortTick = null;
+                        OnLongTick  = null;
+                }
+        }
 }
