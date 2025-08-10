@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
-using IdleCastle.Runtime.Gameplay.GameEvents;
+using GoblinFortress.Runtime.Gameplay.GameEvents;
 using JetBrains.Annotations;
 using MessagePipe;
 
 
-namespace IdleCastle.Runtime.Gameplay
+namespace GoblinFortress.Runtime.Gameplay
 {
 	[UsedImplicitly]
 	public class Wallet : IDisposable

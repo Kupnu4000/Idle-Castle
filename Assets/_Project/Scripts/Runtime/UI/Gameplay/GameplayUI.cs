@@ -1,12 +1,13 @@
 using Cysharp.Threading.Tasks;
-using IdleCastle.Runtime.Zenject;
+using GoblinFortress.Runtime.Zenject;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using Modules.UISystem.Interfaces;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.UI.Gameplay
+// TODO: для UI можно сделать какой-то может быть MVPHandle, который будет управлять созданием Presenter и View
+namespace GoblinFortress.Runtime.UI.Gameplay
 {
 	[UsedImplicitly]
 	public class GameplayUI : UIFacade<GameplayUIView, GameplayUIPresenter>

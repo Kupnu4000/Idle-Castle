@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace IdleCastle.Editor
+namespace GoblinFortress.Editor
 {
 	public static class AlignSelected
 	{
@@ -15,9 +15,7 @@ namespace IdleCastle.Editor
 			                                  .ToArray();
 
 			if (transforms.Length == 0)
-			{
 				return;
-			}
 
 			Object[] objects = transforms.Select(static transform => (Object)transform)
 			                             .ToArray();

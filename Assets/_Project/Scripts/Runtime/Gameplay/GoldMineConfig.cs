@@ -1,9 +1,9 @@
-using IdleCastle.Runtime.Gameplay.Buildings;
-using IdleCastle.Runtime.Utilities;
+using GoblinFortress.Runtime.Gameplay.Buildings;
+using GoblinFortress.Runtime.Utilities;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.Gameplay
+namespace GoblinFortress.Runtime.Gameplay
 {
 	[CreateAssetMenu(fileName = "Gold Mine", menuName = ProjectUtils.MenuPath.Gameplay + "BuildingIds/Gold Mine")]
 	public class GoldMineConfig : BuildingConfig

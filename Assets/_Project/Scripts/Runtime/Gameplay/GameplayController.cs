@@ -1,15 +1,15 @@
 using System;
 using Cysharp.Threading.Tasks;
-using IdleCastle.Runtime.Configs;
-using IdleCastle.Runtime.Gameplay.Buildings;
-using IdleCastle.Runtime.UI.Gameplay;
+using GoblinFortress.Runtime.Configs;
+using GoblinFortress.Runtime.Gameplay.Buildings;
+using GoblinFortress.Runtime.UI.Gameplay;
 using JetBrains.Annotations;
 using Modules.AddressablesUtils;
 using Modules.UISystem;
 using Modules.UISystem.Interfaces;
 
 
-namespace IdleCastle.Runtime.Gameplay
+namespace GoblinFortress.Runtime.Gameplay
 {
 	[UsedImplicitly]
 	public class GameplayController : IDisposable
@@ -58,6 +58,8 @@ namespace IdleCastle.Runtime.Gameplay
 		{
 			_loadedAssets.Dispose();
 			_loadedAssets = null;
+
+			_gameWorld.Dispose();
 
 			_gameplayUI.Dispose();
 			_gameplayUI = null;

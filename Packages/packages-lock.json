@@ -14,13 +14,6 @@
       "dependencies": {},
       "hash": "5ebaa0405ddaa67856d938d1a1d86bf064f6f963"
     },
-    "com.cysharp.unitask": {
-      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "f213ff497e4ff462a77319cf677cf20cc0860ca9"
-    },
     "com.kdev.modules.app-core": {
       "version": "1.0.0",
       "depth": 0,
@@ -116,6 +109,20 @@
       "dependencies": {},
       "url": "http://18.212.63.248:4873"
     },
+    "com.kdev.third-party.unitask": {
+      "version": "2.5.10",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
+    "com.kdev.third-party.zenject": {
+      "version": "9.2.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
     "com.lunawolfstudios.scriptablesheets": {
       "version": "file:com.lunawolfstudios.scriptablesheets",
       "depth": 0,
@@ -123,6 +130,15 @@
       "dependencies": {
         "com.unity.nuget.newtonsoft-json": "3.2.1",
         "com.unity.test-framework": "1.1.33"
+      }
+    },
+    "com.singularitygroup.hotreload": {
+      "version": "file:com.singularitygroup.hotreload",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.unitywebrequest": "1.0.0"
       }
     },
     "com.unity.2d.sprite": {

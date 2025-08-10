@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 
 
-namespace IdleCastle.Runtime.Extensions
+namespace GoblinFortress.Runtime.Extensions
 {
 	public static class GenericExtensions
 	{

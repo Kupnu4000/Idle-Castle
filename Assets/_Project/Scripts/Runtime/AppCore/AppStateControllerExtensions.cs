@@ -3,7 +3,7 @@ using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 
 
-namespace IdleCastle.Runtime.AppCore
+namespace GoblinFortress.Runtime.AppCore
 {
 	[PublicAPI]
 	public static class AppStateControllerExtensions

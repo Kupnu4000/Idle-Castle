@@ -1,10 +1,10 @@
-using IdleCastle.Runtime.Gameplay.GameEvents;
+using GoblinFortress.Runtime.Gameplay.GameEvents;
 using JetBrains.Annotations;
 using MessagePipe;
 using Zenject;
 
 
-namespace IdleCastle.Runtime.Installers
+namespace GoblinFortress.Runtime.Installers
 {
 	[UsedImplicitly]
 	public class GameplayMessagePipeInstaller : Installer<GameplayMessagePipeInstaller>

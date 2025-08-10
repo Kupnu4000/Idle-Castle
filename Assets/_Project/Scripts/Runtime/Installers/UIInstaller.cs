@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using Zenject;
 
 
-namespace IdleCastle.Runtime.Installers
+namespace GoblinFortress.Runtime.Installers
 {
 	// TODO Refactor: this
 	[UsedImplicitly]

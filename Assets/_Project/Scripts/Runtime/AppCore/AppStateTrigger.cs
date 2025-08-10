@@ -1,4 +1,4 @@
-namespace IdleCastle.Runtime.AppCore
+namespace GoblinFortress.Runtime.AppCore
 {
 	public enum AppStateTrigger
 	{

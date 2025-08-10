@@ -1,7 +1,7 @@
 using System;
 
 
-namespace IdleCastle.Runtime.Gameplay
+namespace GoblinFortress.Runtime.Gameplay
 {
 	public interface ITickRunner : IDisposable
 	{

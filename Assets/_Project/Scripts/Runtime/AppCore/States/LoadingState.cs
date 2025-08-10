@@ -1,7 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using IdleCastle.Runtime.PersistentData;
+using GoblinFortress.Runtime.PersistentData;
 using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 using Modules.Bootstrap;
@@ -10,7 +10,7 @@ using UnityEngine.Localization.Settings;
 using UnityEngine.ResourceManagement.AsyncOperations;
 
 
-namespace IdleCastle.Runtime.AppCore.States
+namespace GoblinFortress.Runtime.AppCore.States
 {
 	[UsedImplicitly]
 	public class LoadingState : IState<IAppStateController>

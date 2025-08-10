@@ -1,11 +1,11 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using IdleCastle.Runtime.PersistentData;
+using GoblinFortress.Runtime.PersistentData;
 using JetBrains.Annotations;
 using Modules.Bootstrap.Interfaces;
 
 
-namespace IdleCastle.Runtime.Bootstrap.Stages
+namespace GoblinFortress.Runtime.Bootstrap.Stages
 {
 	[UsedImplicitly]
 	public class PersistentDataBootstrapStage : IBootstrapStage

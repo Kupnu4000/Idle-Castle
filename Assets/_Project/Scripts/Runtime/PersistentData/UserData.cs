@@ -5,7 +5,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.PersistentData
+namespace GoblinFortress.Runtime.PersistentData
 {
 	[Serializable]
 	public class UserData

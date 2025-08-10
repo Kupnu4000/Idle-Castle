@@ -1,7 +1,7 @@
 using JetBrains.Annotations;
 
 
-namespace IdleCastle.Runtime.Utilities
+namespace GoblinFortress.Runtime.Utilities
 {
 	[PublicAPI]
 	public static class ProjectUtils

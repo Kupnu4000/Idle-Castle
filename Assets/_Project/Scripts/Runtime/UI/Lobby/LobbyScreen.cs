@@ -1,12 +1,12 @@
 using Cysharp.Threading.Tasks;
-using IdleCastle.Runtime.Zenject;
+using GoblinFortress.Runtime.Zenject;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using Modules.UISystem.Interfaces;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.UI.Lobby
+namespace GoblinFortress.Runtime.UI.Lobby
 {
 	[UsedImplicitly]
 	public class LobbyScreen : UIFacade<LobbyScreenView, LobbyScreenPresenter>

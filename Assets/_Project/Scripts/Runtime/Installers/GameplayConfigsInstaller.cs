@@ -1,13 +1,13 @@
 using System.Collections.Generic;
-using IdleCastle.Runtime.Gameplay.Buildings;
-using IdleCastle.Runtime.Gameplay.Currencies;
-using IdleCastle.Runtime.Utilities;
+using GoblinFortress.Runtime.Gameplay.Buildings;
+using GoblinFortress.Runtime.Gameplay.Currencies;
+using GoblinFortress.Runtime.Utilities;
 using Modules.Configs;
 using UnityEngine;
 using Zenject;
 
 
-namespace IdleCastle.Runtime.Installers
+namespace GoblinFortress.Runtime.Installers
 {
 	[CreateAssetMenu(fileName = "Gameplay Configs Installer", menuName = ProjectUtils.MenuPath.Gameplay + "Configs/Installer")]
 	public class GameplayConfigsInstaller : ScriptableObjectInstaller

@@ -1,10 +1,10 @@
-using IdleCastle.Runtime.Extensions;
-using IdleCastle.Runtime.Gameplay.GameEvents;
+using GoblinFortress.Runtime.Extensions;
+using GoblinFortress.Runtime.Gameplay.GameEvents;
 using JetBrains.Annotations;
 using MessagePipe;
 
 
-namespace IdleCastle.Runtime.Gameplay.Buildings
+namespace GoblinFortress.Runtime.Gameplay.Buildings
 {
 	[UsedImplicitly]
 	public class GoldMine : IBuilding

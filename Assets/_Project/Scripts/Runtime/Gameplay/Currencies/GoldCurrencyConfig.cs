@@ -1,8 +1,8 @@
-using IdleCastle.Runtime.Utilities;
+using GoblinFortress.Runtime.Utilities;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.Gameplay.Currencies
+namespace GoblinFortress.Runtime.Gameplay.Currencies
 {
 	[CreateAssetMenu(fileName = "Gold", menuName = ProjectUtils.MenuPath.Gameplay + "Currencies/Gold")]
 	public class GoldCurrencyConfig : CurrencyConfig

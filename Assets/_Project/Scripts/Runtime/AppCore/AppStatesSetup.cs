@@ -1,10 +1,10 @@
 using System;
-using IdleCastle.Runtime.AppCore.States;
+using GoblinFortress.Runtime.AppCore.States;
 using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 
 
-namespace IdleCastle.Runtime.AppCore
+namespace GoblinFortress.Runtime.AppCore
 {
 	[UsedImplicitly]
 	public class AppStatesSetup : IAppStatesSetup

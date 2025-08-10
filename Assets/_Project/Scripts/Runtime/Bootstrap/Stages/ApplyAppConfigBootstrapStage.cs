@@ -1,12 +1,12 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using IdleCastle.Runtime.Configs;
+using GoblinFortress.Runtime.Configs;
 using JetBrains.Annotations;
 using Modules.Bootstrap.Interfaces;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.Bootstrap.Stages
+namespace GoblinFortress.Runtime.Bootstrap.Stages
 {
 	[UsedImplicitly]
 	public class ApplyAppConfigBootstrapStage : IBootstrapStage

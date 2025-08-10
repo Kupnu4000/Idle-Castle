@@ -1,11 +1,11 @@
-using IdleCastle.Runtime.Gameplay;
-using IdleCastle.Runtime.Gameplay.Buildings;
+using GoblinFortress.Runtime.Gameplay;
+using GoblinFortress.Runtime.Gameplay.Buildings;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.UI.Widgets
+namespace GoblinFortress.Runtime.UI.Widgets
 {
 	[UsedImplicitly]
 	public class BuildingWidgetPresenter : IUIPresenter<BuildingWidgetView>

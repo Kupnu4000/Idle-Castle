@@ -1,11 +1,11 @@
 using System.Diagnostics.CodeAnalysis;
-using IdleCastle.Runtime.Utilities;
+using GoblinFortress.Runtime.Utilities;
 using JetBrains.Annotations;
 using Modules.Configs;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.Configs
+namespace GoblinFortress.Runtime.Configs
 {
 	[PublicAPI]
 	[CreateAssetMenu(fileName = "App Config", menuName = ProjectUtils.MenuPath.Configs + "App Config")]

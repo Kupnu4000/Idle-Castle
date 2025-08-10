@@ -1,10 +1,10 @@
 using System;
-using IdleCastle.Runtime.Extensions;
+using GoblinFortress.Runtime.Extensions;
 using JetBrains.Annotations;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.Gameplay
+namespace GoblinFortress.Runtime.Gameplay
 {
 	// TODO: нужны ли тут длинные и короткие тики?
 	[UsedImplicitly]
@@ -74,12 +74,12 @@ namespace IdleCastle.Runtime.Gameplay
 
 		public void Resume () => _isPaused = false;
 
-                public void Dispose ()
-                {
-                        OnTick      = null;
-                        OnLateTick  = null;
-                        OnShortTick = null;
-                        OnLongTick  = null;
-                }
-        }
+		public void Dispose ()
+		{
+			OnTick      = null;
+			OnLateTick  = null;
+			OnShortTick = null;
+			OnLongTick  = null;
+		}
+	}
 }

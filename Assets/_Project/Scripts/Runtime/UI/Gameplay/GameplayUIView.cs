@@ -1,9 +1,9 @@
-using IdleCastle.Runtime.UI.Widgets;
+using GoblinFortress.Runtime.UI.Widgets;
 using Modules.UISystem;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.UI.Gameplay
+namespace GoblinFortress.Runtime.UI.Gameplay
 {
 	[AddressableAutoKey("Gameplay UI")]
 	public class GameplayUIView : UIScreen

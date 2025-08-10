@@ -2,7 +2,7 @@ using Modules.UISystem;
 using UnityEngine;
 
 
-namespace IdleCastle.Runtime.UI.Widgets
+namespace GoblinFortress.Runtime.UI.Widgets
 {
 	public class BuildingWidgetView : MonoBehaviour, IUIView
 	{

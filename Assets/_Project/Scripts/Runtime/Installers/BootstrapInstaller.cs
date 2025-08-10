@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using IdleCastle.Runtime.Bootstrap.Stages;
+using GoblinFortress.Runtime.Bootstrap.Stages;
 using JetBrains.Annotations;
 using Modules.Bootstrap;
 using Modules.Bootstrap.Interfaces;
 using Zenject;
 
 
-namespace IdleCastle.Runtime.Installers
+namespace GoblinFortress.Runtime.Installers
 {
 	[UsedImplicitly]
 	public class BootstrapInstaller : Installer<BootstrapInstaller>
