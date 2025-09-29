@@ -1,6 +1,7 @@
 {
-    "name": "CodeStage.Maintainer.Demo",
-	"references": [],
+    "name": "ProjectUtils",
+    "rootNamespace": "ProjectUtils",
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

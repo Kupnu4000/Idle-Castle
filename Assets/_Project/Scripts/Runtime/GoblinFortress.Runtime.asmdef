@@ -2,6 +2,7 @@
     "name": "GoblinFortress.Runtime",
     "rootNamespace": "GoblinFortress.Runtime",
     "references": [
+        "ProjectUtils",
         "Unity.Addressables",
         "Unity.Localization",
         "Unity.ResourceManager",

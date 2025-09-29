@@ -1,10 +1,18 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: 64a9165ba1054fee9a0925463c4ab649
-timeCreated: 1541625358
 AssetOrigin:
   serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
   assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Modules/RecordsBased/Issues/Records/SceneSettingsIssueRecord.cs
-  uploadId: 710853
+  uploadId: 781506
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

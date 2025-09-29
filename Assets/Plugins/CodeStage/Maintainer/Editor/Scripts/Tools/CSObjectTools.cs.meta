@@ -1,15 +1,18 @@
 fileFormatVersion: 2
 guid: bae1787bf8c8d424faf5091126082571
+AssetOrigin:
+  serializedVersion: 1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
+  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Tools/CSObjectTools.cs
+  uploadId: 781506
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
-  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Tools/CSObjectTools.cs
-  uploadId: 710853
+  assetBundleName: 
+  assetBundleVariant: 

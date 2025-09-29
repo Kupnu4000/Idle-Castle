@@ -1,15 +1,15 @@
 using System.Collections.Generic;
 using GoblinFortress.Runtime.Gameplay.Buildings;
 using GoblinFortress.Runtime.Gameplay.Currencies;
-using GoblinFortress.Runtime.Utilities;
 using Modules.Configs;
+using ProjectUtils;
 using UnityEngine;
 using Zenject;
 
 
 namespace GoblinFortress.Runtime.Installers
 {
-	[CreateAssetMenu(fileName = "Gameplay Configs Installer", menuName = ProjectUtils.MenuPath.Gameplay + "Configs/Installer")]
+	[CreateAssetMenu(fileName = "Gameplay Configs Installer", menuName = ProjectInfo.MenuPath.Gameplay + "Configs/Installer")]
 	public class GameplayConfigsInstaller : ScriptableObjectInstaller
 	{
 		[SerializeField] private List<CurrencyConfig> _currencies;

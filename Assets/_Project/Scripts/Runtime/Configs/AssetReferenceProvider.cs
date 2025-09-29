@@ -1,13 +1,13 @@
 using GoblinFortress.Runtime.UI.Widgets;
-using GoblinFortress.Runtime.Utilities;
 using Modules.AddressablesUtils;
 using Modules.Configs;
+using ProjectUtils;
 using UnityEngine;
 
 
 namespace GoblinFortress.Runtime.Configs
 {
-	[CreateAssetMenu(fileName = "Asset Reference Provider", menuName = ProjectUtils.MenuPath.Configs + "Asset Reference Provider")]
+	[CreateAssetMenu(fileName = "Asset Reference Provider", menuName = ProjectInfo.MenuPath.Configs + "Asset Reference Provider")]
 	public class AssetReferenceProvider : Config
 	{
 		[SerializeField] private ComponentReference<BuildingWidgetView> _buildingWidgetView;

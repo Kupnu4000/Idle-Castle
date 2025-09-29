@@ -1,14 +1,14 @@
 using System.Diagnostics.CodeAnalysis;
-using GoblinFortress.Runtime.Utilities;
 using JetBrains.Annotations;
 using Modules.Configs;
+using ProjectUtils;
 using UnityEngine;
 
 
 namespace GoblinFortress.Runtime.Configs
 {
 	[PublicAPI]
-	[CreateAssetMenu(fileName = "App Config", menuName = ProjectUtils.MenuPath.Configs + "App Config")]
+	[CreateAssetMenu(fileName = "App Config", menuName = ProjectInfo.MenuPath.Configs + "App Config")]
 	public class AppConfig : Config
 	{
 		[SerializeField] private ThreadPriority       _backgroundLoadingPriority = ThreadPriority.Normal;

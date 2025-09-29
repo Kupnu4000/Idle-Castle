@@ -1,10 +1,18 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: 8b6034c8918d4f599c6e18336db96c61
-timeCreated: 1541628913
 AssetOrigin:
   serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
   assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Tools/CSSettingsTools.cs
-  uploadId: 710853
+  uploadId: 781506
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

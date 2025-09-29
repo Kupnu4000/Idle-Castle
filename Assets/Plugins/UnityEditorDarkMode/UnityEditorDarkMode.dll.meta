@@ -1,8 +1,15 @@
 fileFormatVersion: 2
 guid: c8116b2fba7c75047b30e087741eb77b
+AssetOrigin:
+  serializedVersion: 1
+  productId: 281842
+  packageName: DarkMode for Unity Editor on Windows
+  packageVersion: 1.1
+  assetPath: Assets/Plugins/UnityEditorDarkMode/UnityEditorDarkMode.dll
+  uploadId: 656109
 PluginImporter:
   externalObjects: {}
-  serializedVersion: 2
+  serializedVersion: 3
   iconMap: {}
   executionOrder: {}
   defineConstraints: []
@@ -11,9 +18,7 @@ PluginImporter:
   isExplicitlyReferenced: 0
   validateReferences: 1
   platformData:
-  - first:
-      : Any
-    second:
+    Any:
       enabled: 0
       settings:
         Exclude Editor: 0
@@ -21,50 +26,28 @@ PluginImporter:
         Exclude OSXUniversal: 1
         Exclude Win: 1
         Exclude Win64: 1
-  - first:
-      Any: 
-    second:
-      enabled: 0
-      settings: {}
-  - first:
-      Editor: Editor
-    second:
+    Editor:
       enabled: 1
       settings:
         CPU: AnyCPU
         DefaultValueInitialized: true
         OS: Windows
-  - first:
-      Standalone: Linux64
-    second:
+    Linux64:
       enabled: 0
       settings:
         CPU: None
-  - first:
-      Standalone: OSXUniversal
-    second:
+    OSXUniversal:
       enabled: 0
       settings:
         CPU: None
-  - first:
-      Standalone: Win
-    second:
+    Win:
       enabled: 0
       settings:
         CPU: None
-  - first:
-      Standalone: Win64
-    second:
+    Win64:
       enabled: 0
       settings:
         CPU: None
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 281842
-  packageName: DarkMode for Unity Editor on Windows
-  packageVersion: 1.1
-  assetPath: Assets/Plugins/UnityEditorDarkMode/UnityEditorDarkMode.dll
-  uploadId: 656109

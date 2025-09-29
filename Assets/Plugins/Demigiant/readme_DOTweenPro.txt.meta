@@ -15,8 +15,6 @@ labels:
 - Easing
 - Shake
 - Punch
-TextScriptImporter:
-  userData: 
 AssetOrigin:
   serializedVersion: 1
   productId: 32416
@@ -24,3 +22,8 @@ AssetOrigin:
   packageVersion: 1.0.380
   assetPath: Assets/Plugins/Demigiant/readme_DOTweenPro.txt
   uploadId: 642067
+TextScriptImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

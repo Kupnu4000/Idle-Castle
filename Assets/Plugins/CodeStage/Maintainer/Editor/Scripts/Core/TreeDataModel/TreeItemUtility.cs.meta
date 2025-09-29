@@ -1,8 +1,14 @@
 fileFormatVersion: 2
 guid: 470ffc6a0d5e3884e9455866fafa79c8
-timeCreated: 1510506101
-licenseType: Store
+AssetOrigin:
+  serializedVersion: 1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
+  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Core/TreeDataModel/TreeItemUtility.cs
+  uploadId: 781506
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
@@ -10,10 +16,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
-  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Core/TreeDataModel/TreeItemUtility.cs
-  uploadId: 710853

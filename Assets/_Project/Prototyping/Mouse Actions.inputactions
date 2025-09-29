@@ -1,0 +1,35 @@
+{
+    "version": 1,
+    "name": "Mouse Actions",
+    "maps": [
+        {
+            "name": "New action map",
+            "id": "ea920dc8-c446-4e76-bcf6-4075879101e0",
+            "actions": [
+                {
+                    "name": "New action",
+                    "type": "Button",
+                    "id": "788988ba-4ada-4010-81a8-13c2d3b36082",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "04002c8f-3be4-4daf-8a36-82c8baaa394d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "New action",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

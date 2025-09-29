@@ -1,11 +1,5 @@
 fileFormatVersion: 2
 guid: 4d0390bd8b8ffd640b34fe25065ff1df
-MonoImporter:
-  serializedVersion: 2
-  defaultReferences: []
-  executionOrder: 0
-  icon: {instanceID: 0}
-  userData: 
 AssetOrigin:
   serializedVersion: 1
   productId: 32416
@@ -13,3 +7,12 @@ AssetOrigin:
   packageVersion: 1.0.380
   assetPath: Assets/Plugins/Demigiant/DOTweenPro/DOTweenAnimation.cs
   uploadId: 642067
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

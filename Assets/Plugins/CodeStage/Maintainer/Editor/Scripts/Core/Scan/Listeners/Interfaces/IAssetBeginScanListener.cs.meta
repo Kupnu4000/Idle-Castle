@@ -1,10 +1,18 @@
-﻿fileFormatVersion: 2
+fileFormatVersion: 2
 guid: dfa22bddc4684cba933cb24b57d42bdc
-timeCreated: 1632062971
 AssetOrigin:
   serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
   assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Core/Scan/Listeners/Interfaces/IAssetBeginScanListener.cs
-  uploadId: 710853
+  uploadId: 781506
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

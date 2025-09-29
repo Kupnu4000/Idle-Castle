@@ -1,8 +1,14 @@
 fileFormatVersion: 2
 guid: bb7c1406e88b19240936a7c1ca92d787
-timeCreated: 1510587752
-licenseType: Store
+AssetOrigin:
+  serializedVersion: 1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
+  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Core/Map/ReferencedAtInfo.cs
+  uploadId: 781506
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
@@ -10,10 +16,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
-  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Core/Map/ReferencedAtInfo.cs
-  uploadId: 710853

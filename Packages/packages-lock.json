@@ -15,11 +15,12 @@
       "hash": "5ebaa0405ddaa67856d938d1a1d86bf064f6f963"
     },
     "com.kdev.modules.app-core": {
-      "version": "1.0.0",
+      "version": "1.0.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.kdev.modules.state-machine": "1.0.0"
+        "com.kdev.modules.state-machine": "1.0.2",
+        "com.kdev.third-party.unitask": "2.5.10"
       },
       "url": "http://18.212.63.248:4873"
     },
@@ -41,7 +42,9 @@
       "version": "1.0.0",
       "depth": 0,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.kdev.third-party.unitask": "2.5.10"
+      },
       "url": "http://18.212.63.248:4873"
     },
     "com.kdev.modules.configs": {
@@ -68,20 +71,13 @@
       "url": "http://18.212.63.248:4873"
     },
     "com.kdev.modules.favourites": {
-      "version": "1.0.1",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "http://18.212.63.248:4873"
-    },
-    "com.kdev.modules.input-handler": {
       "version": "1.0.0",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "http://18.212.63.248:4873"
     },
-    "com.kdev.modules.mediator": {
+    "com.kdev.modules.input-handler": {
       "version": "1.0.0",
       "depth": 0,
       "source": "registry",
@@ -103,15 +99,17 @@
       "url": "http://18.212.63.248:4873"
     },
     "com.kdev.modules.state-machine": {
-      "version": "1.0.0",
-      "depth": 0,
+      "version": "1.0.2",
+      "depth": 1,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.kdev.third-party.unitask": "2.5.10"
+      },
       "url": "http://18.212.63.248:4873"
     },
     "com.kdev.third-party.unitask": {
       "version": "2.5.10",
-      "depth": 0,
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "http://18.212.63.248:4873"
@@ -201,7 +199,7 @@
       "dependencies": {}
     },
     "com.unity.ide.rider": {
-      "version": "3.0.36",
+      "version": "3.0.38",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -219,7 +217,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "1.14.1",
+      "version": "1.14.2",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -228,7 +226,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.localization": {
-      "version": "1.5.5",
+      "version": "1.5.7",
       "depth": 0,
       "source": "registry",
       "dependencies": {

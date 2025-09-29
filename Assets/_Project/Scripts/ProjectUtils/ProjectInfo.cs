@@ -1,10 +1,10 @@
 using JetBrains.Annotations;
 
 
-namespace GoblinFortress.Runtime.Utilities
+namespace ProjectUtils
 {
 	[PublicAPI]
-	public static class ProjectUtils
+	public static class ProjectInfo
 	{
 		public const string ProjectName = "Idle Castle";
 

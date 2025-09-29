@@ -14,9 +14,9 @@ namespace _Project.Prototyping
 
 		private Plane _groundPlane = new(Vector3.up, Vector3.zero);
 
-		private Vector3 _cursorTargetPosition;
 		private float   _dampingTime;
 		private Vector3 _dampingVelocity;
+		private Vector3 _cursorTargetPosition;
 
 		private void Awake ()
 		{

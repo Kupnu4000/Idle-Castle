@@ -1,5 +1,12 @@
 fileFormatVersion: 2
-guid: 50fa86deb38b01d46a99d1354bb2c311
+guid: 3a48b956a1ac4dd4abd81fcf09047a7c
+AssetOrigin:
+  serializedVersion: 1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
+  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Common/Tools/CSEditorIcons.cs
+  uploadId: 781506
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
@@ -9,10 +16,3 @@ MonoImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
-  assetPath: Assets/Plugins/CodeStage/Maintainer/Editor/Scripts/Common/Tools/CSEditorIcons.cs
-  uploadId: 710853

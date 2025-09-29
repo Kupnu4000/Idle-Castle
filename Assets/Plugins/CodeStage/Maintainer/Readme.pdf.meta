@@ -21,12 +21,15 @@ labels:
 - Clean
 - focus
 - Project
-DefaultImporter:
-  userData: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 32199
-  packageName: Maintainer
-  packageVersion: 1.17.1
+  productId: 310179
+  packageName: Maintainer 2
+  packageVersion: 2.0.0
   assetPath: Assets/Plugins/CodeStage/Maintainer/Readme.pdf
-  uploadId: 710853
+  uploadId: 781506
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
