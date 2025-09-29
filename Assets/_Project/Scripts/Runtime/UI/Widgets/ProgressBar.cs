@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 
-namespace GoblinFortress.Runtime.UI.Widgets
+namespace IdleCastle.UI.Widgets
 {
 	[ExecuteAlways]
 	public class ProgressBar : UIBehaviour

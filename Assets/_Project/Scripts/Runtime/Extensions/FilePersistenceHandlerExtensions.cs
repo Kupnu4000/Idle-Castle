@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.Extensions
+namespace IdleCastle.Extensions
 {
 	public static class FilePersistenceHandlerExtensions
 	{

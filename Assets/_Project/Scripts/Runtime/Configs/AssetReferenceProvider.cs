@@ -1,11 +1,11 @@
-using GoblinFortress.Runtime.UI.Widgets;
+using IdleCastle.UI.Widgets;
 using Modules.AddressablesUtils;
 using Modules.Configs;
 using ProjectUtils;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.Configs
+namespace IdleCastle.Configs
 {
 	[CreateAssetMenu(fileName = "Asset Reference Provider", menuName = ProjectInfo.MenuPath.Configs + "Asset Reference Provider")]
 	public class AssetReferenceProvider : Config

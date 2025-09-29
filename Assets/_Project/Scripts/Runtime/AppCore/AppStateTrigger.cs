@@ -1,10 +1,9 @@
-namespace GoblinFortress.Runtime.AppCore
+namespace IdleCastle.AppCore
 {
 	public enum AppStateTrigger
 	{
 		Loading,
 		Lobby,
-		Gameplay,
-		LevelResult
+		Gameplay
 	}
 }

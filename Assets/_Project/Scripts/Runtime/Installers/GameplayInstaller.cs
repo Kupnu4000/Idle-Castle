@@ -1,10 +1,10 @@
-using GoblinFortress.Runtime.Gameplay;
+using IdleCastle.Gameplay;
 using JetBrains.Annotations;
 using Modules.AddressablesUtils;
 using Zenject;
 
 
-namespace GoblinFortress.Runtime.Installers
+namespace IdleCastle.Installers
 {
 	[UsedImplicitly]
 	public class GameplayInstaller : Installer<GameplayInstaller>

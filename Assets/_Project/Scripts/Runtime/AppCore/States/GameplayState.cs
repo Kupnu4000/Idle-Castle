@@ -1,13 +1,13 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GoblinFortress.Runtime.Gameplay;
+using IdleCastle.Gameplay;
 using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 using Modules.StateMachine.Interfaces;
 using Modules.UISystem.Interfaces;
 
 
-namespace GoblinFortress.Runtime.AppCore.States
+namespace IdleCastle.AppCore.States
 {
 	[UsedImplicitly]
 	public class GameplayState : IState<IAppStateController>

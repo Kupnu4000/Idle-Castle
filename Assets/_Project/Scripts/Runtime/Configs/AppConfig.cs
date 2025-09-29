@@ -5,7 +5,7 @@ using ProjectUtils;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.Configs
+namespace IdleCastle.Configs
 {
 	[PublicAPI]
 	[CreateAssetMenu(fileName = "App Config", menuName = ProjectInfo.MenuPath.Configs + "App Config")]

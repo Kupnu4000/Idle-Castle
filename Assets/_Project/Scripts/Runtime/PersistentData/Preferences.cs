@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.PersistentData
+namespace IdleCastle.PersistentData
 {
 	[Serializable]
 	public sealed class Preferences

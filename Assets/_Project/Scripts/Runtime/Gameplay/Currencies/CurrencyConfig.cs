@@ -2,7 +2,7 @@ using Modules.Configs;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.Gameplay.Currencies
+namespace IdleCastle.Gameplay.Currencies
 {
 	public abstract class CurrencyConfig : Config
 	{

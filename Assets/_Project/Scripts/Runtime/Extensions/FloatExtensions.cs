@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 
 
-namespace GoblinFortress.Runtime.Extensions
+namespace IdleCastle.Extensions
 {
 	public static class FloatExtensions
 	{

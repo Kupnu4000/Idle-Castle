@@ -1,6 +1,6 @@
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GoblinFortress.Runtime.UI.Lobby;
+using IdleCastle.UI.Lobby;
 using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 using Modules.StateMachine.Interfaces;
@@ -8,7 +8,7 @@ using Modules.UISystem;
 using Modules.UISystem.Interfaces;
 
 
-namespace GoblinFortress.Runtime.AppCore.States
+namespace IdleCastle.AppCore.States
 {
 	[UsedImplicitly]
 	public class LobbyState : IState<IAppStateController>

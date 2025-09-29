@@ -298,7 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 297200402f12fa34381cfab94eb1c0ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _tickRunner: {fileID: 920016568}
   _spriteRenderer: {fileID: 1846908975}
   _ticksPerHour: 1
   _dawnStartHour: 6

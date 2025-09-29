@@ -1,4 +1,4 @@
-namespace GoblinFortress.Runtime.Gameplay.GameEvents
+namespace IdleCastle.Gameplay.GameEvents
 {
 	public readonly struct CurrencyAmountChanged
 	{

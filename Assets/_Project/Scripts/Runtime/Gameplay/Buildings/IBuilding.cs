@@ -1,4 +1,4 @@
-namespace GoblinFortress.Runtime.Gameplay.Buildings
+namespace IdleCastle.Gameplay.Buildings
 {
 	// TODO Refactor: rename это по идее IIncomeGenerator
 	public interface IBuilding

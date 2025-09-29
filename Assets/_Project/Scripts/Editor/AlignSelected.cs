@@ -3,7 +3,7 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace GoblinFortress.Editor
+namespace IdleCastle.Editor
 {
 	public static class AlignSelected
 	{

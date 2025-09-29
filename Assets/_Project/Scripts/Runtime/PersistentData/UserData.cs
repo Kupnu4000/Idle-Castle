@@ -5,21 +5,17 @@ using Newtonsoft.Json;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.PersistentData
+namespace IdleCastle.PersistentData
 {
 	[Serializable]
 	public class UserData
 	{
-		[JsonProperty("sessions")] private int _sessionCount;
-
-		public bool IsFirstSession => _sessionCount == 1;
-
 		[JsonIgnore] public string FilePath => Path.Combine(Application.persistentDataPath, "user_data.sav");
 
 		public bool TryLoad ()
 		{
 			// TODO Refactor: использовать здесь метод TryLoadInto из FilePersistenceHandlerExtensions
-			if (FilePersistenceHandler.TryLoad(FilePath, out string data) == false)
+			if (!FilePersistenceHandler.TryLoad(FilePath, out string data))
 			{
 				return false;
 			}
@@ -40,11 +36,6 @@ namespace GoblinFortress.Runtime.PersistentData
 			string json = JsonConvert.SerializeObject(this, Formatting.Indented);
 
 			FilePersistenceHandler.Save(FilePath, json);
-		}
-
-		public void IncrementSessionCount ()
-		{
-			_sessionCount++;
 		}
 	}
 }

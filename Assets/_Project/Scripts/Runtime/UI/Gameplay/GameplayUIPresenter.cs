@@ -1,19 +1,19 @@
 using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
-using GoblinFortress.Runtime.Extensions;
-using GoblinFortress.Runtime.Gameplay;
-using GoblinFortress.Runtime.Gameplay.Buildings;
-using GoblinFortress.Runtime.Gameplay.Currencies;
-using GoblinFortress.Runtime.Gameplay.GameEvents;
-using GoblinFortress.Runtime.UI.Widgets;
+using IdleCastle.Extensions;
+using IdleCastle.Gameplay;
+using IdleCastle.Gameplay.Buildings;
+using IdleCastle.Gameplay.Currencies;
+using IdleCastle.Gameplay.GameEvents;
+using IdleCastle.UI.Widgets;
 using JetBrains.Annotations;
 using MessagePipe;
 using Modules.AddressablesUtils;
 using Modules.UISystem;
 
 
-namespace GoblinFortress.Runtime.UI.Gameplay
+namespace IdleCastle.UI.Gameplay
 {
 	// TODO Refactor: иконки берём из таблички, именуем item:gold_ore
 	[UsedImplicitly]

@@ -3,7 +3,7 @@ using JetBrains.Annotations;
 using Modules.UISystem;
 
 
-namespace GoblinFortress.Runtime.UI.Lobby
+namespace IdleCastle.UI.Lobby
 {
 	[UsedImplicitly]
 	public class LobbyScreenPresenter : IUIPresenter<LobbyScreenView>

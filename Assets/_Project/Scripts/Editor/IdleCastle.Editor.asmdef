@@ -1,6 +1,6 @@
 {
-    "name": "GoblinFortress.Editor",
-    "rootNamespace": "GoblinFortress.Editor",
+    "name": "IdleCastle.Editor",
+    "rootNamespace": "IdleCastle.Editor",
     "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],

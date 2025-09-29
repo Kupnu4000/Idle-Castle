@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace GoblinFortress.Runtime.UI.Lobby
+namespace IdleCastle.UI.Lobby
 {
 	[AddressableAutoKey("Lobby Screen")]
 	public class LobbyScreenView : UIScreen

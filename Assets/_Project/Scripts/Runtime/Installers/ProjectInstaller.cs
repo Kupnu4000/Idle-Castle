@@ -1,13 +1,14 @@
-using GoblinFortress.Runtime.AppCore;
-using GoblinFortress.Runtime.Gameplay;
-using GoblinFortress.Runtime.Zenject;
+using IdleCastle.AppCore;
+using IdleCastle.Gameplay;
+using IdleCastle.Zenject;
 using Modules.AppCore.Zenject;
 using Modules.ApplicationEvents.Zenject;
+using Modules.Bootstrap.Zenject;
 using Modules.StateMachine.Zenject;
 using Zenject;
 
 
-namespace GoblinFortress.Runtime.Installers
+namespace IdleCastle.Installers
 {
 	public class ProjectInstaller : MonoInstaller
 	{

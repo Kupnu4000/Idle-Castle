@@ -1,24 +1,29 @@
+using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-using GoblinFortress.Runtime.Configs;
+using IdleCastle.Configs;
 using JetBrains.Annotations;
-using Modules.Bootstrap.Interfaces;
+using Modules.Bootstrap.Runtime.Interfaces;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.Bootstrap.Stages
+namespace IdleCastle.Bootstrap
 {
 	[UsedImplicitly]
-	public class ApplyAppConfigBootstrapStage : IBootstrapStage
+	public class ApplyAppConfigBootstrapCommand : IBootstrapCommand
 	{
+		public string    Name        => nameof(ApplyAppConfigBootstrapCommand);
+		public bool      IsEssential => false;
+		public TimeSpan? Timeout     => null;
+
 		private readonly AppConfig _config;
 
-		public ApplyAppConfigBootstrapStage (AppConfig config)
+		public ApplyAppConfigBootstrapCommand (AppConfig config)
 		{
 			_config = config;
 		}
 
-		public UniTask Execute (CancellationToken cancellationToken = default)
+		public UniTask ExecuteAsync (CancellationToken cancellationToken)
 		{
 			Application.backgroundLoadingPriority = _config.BackgroundLoadingPriority;
 			Screen.sleepTimeout                   = _config.SleepTimeout;

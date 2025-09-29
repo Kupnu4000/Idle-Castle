@@ -1,9 +1,9 @@
-using GoblinFortress.Runtime.PersistentData;
+using IdleCastle.PersistentData;
 using JetBrains.Annotations;
 using Zenject;
 
 
-namespace GoblinFortress.Runtime.Installers
+namespace IdleCastle.Installers
 {
 	[UsedImplicitly]
 	public class PersistentDataInstaller : Installer<PersistentDataInstaller>

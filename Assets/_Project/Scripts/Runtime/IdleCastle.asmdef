@@ -1,6 +1,6 @@
 {
-    "name": "GoblinFortress.Runtime",
-    "rootNamespace": "GoblinFortress.Runtime",
+    "name": "IdleCastle",
+    "rootNamespace": "IdleCastle",
     "references": [
         "ProjectUtils",
         "Unity.Addressables",
@@ -16,6 +16,7 @@
         "Modules.AppCore.Zenject",
         "Modules.ApplicationEvents.Zenject",
         "Modules.Bootstrap",
+        "Modules.Bootstrap.Zenject",
         "Modules.Configs",
         "Modules.Currencies",
         "Modules.Persistence",

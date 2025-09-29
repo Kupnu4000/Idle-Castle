@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using Zenject;
 
 
-namespace GoblinFortress.Runtime.Zenject
+namespace IdleCastle.Zenject
 {
 	[UsedImplicitly]
 	public class GenericFactory

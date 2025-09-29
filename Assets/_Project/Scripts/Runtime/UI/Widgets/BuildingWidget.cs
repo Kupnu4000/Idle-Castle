@@ -1,14 +1,14 @@
 using Cysharp.Threading.Tasks;
-using GoblinFortress.Runtime.Configs;
-using GoblinFortress.Runtime.Gameplay.Buildings;
-using GoblinFortress.Runtime.Zenject;
+using IdleCastle.Configs;
+using IdleCastle.Gameplay.Buildings;
+using IdleCastle.Zenject;
 using JetBrains.Annotations;
 using Modules.AddressablesUtils;
 using Modules.UISystem;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.UI.Widgets
+namespace IdleCastle.UI.Widgets
 {
 	// TODO Refactor: dispose. Presenter subscribes to the ticker, so it should be disposed
 	[UsedImplicitly]

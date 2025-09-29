@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
-using GoblinFortress.Runtime.Gameplay.Buildings;
-using GoblinFortress.Runtime.Gameplay.GameEvents;
-using GoblinFortress.Runtime.Zenject;
+using IdleCastle.Gameplay.Buildings;
+using IdleCastle.Gameplay.GameEvents;
+using IdleCastle.Zenject;
 using JetBrains.Annotations;
 using MessagePipe;
 
 
-namespace GoblinFortress.Runtime.Gameplay
+namespace IdleCastle.Gameplay
 {
 	// this has to be a model of the game world
 	[UsedImplicitly]

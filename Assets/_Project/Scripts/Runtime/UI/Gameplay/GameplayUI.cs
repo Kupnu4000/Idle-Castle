@@ -1,5 +1,5 @@
 using Cysharp.Threading.Tasks;
-using GoblinFortress.Runtime.Zenject;
+using IdleCastle.Zenject;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using Modules.UISystem.Interfaces;
@@ -7,7 +7,7 @@ using UnityEngine;
 
 
 // TODO: для UI можно сделать какой-то может быть MVPHandle, который будет управлять созданием Presenter и View
-namespace GoblinFortress.Runtime.UI.Gameplay
+namespace IdleCastle.UI.Gameplay
 {
 	[UsedImplicitly]
 	public class GameplayUI : UIFacade<GameplayUIView, GameplayUIPresenter>

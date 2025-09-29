@@ -1,10 +1,10 @@
-using GoblinFortress.Runtime.Gameplay.Currencies;
+using IdleCastle.Gameplay.Currencies;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-namespace GoblinFortress.Runtime.UI.Widgets
+namespace IdleCastle.UI.Widgets
 {
 	public class CurrencyWidget : MonoBehaviour
 	{

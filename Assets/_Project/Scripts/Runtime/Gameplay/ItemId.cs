@@ -1,7 +1,7 @@
 using System;
 
 
-namespace GoblinFortress.Runtime.Gameplay
+namespace IdleCastle.Gameplay
 {
 	public readonly struct ItemId : IEquatable<ItemId>
 	{

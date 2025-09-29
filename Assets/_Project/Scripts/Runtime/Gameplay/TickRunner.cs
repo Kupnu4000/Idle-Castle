@@ -1,10 +1,10 @@
 using System;
-using GoblinFortress.Runtime.Extensions;
+using IdleCastle.Extensions;
 using JetBrains.Annotations;
 using UnityEngine;
 
 
-namespace GoblinFortress.Runtime.Gameplay
+namespace IdleCastle.Gameplay
 {
 	// TODO: нужны ли тут длинные и короткие тики?
 	[UsedImplicitly]

@@ -2,7 +2,7 @@ using System;
 using Modules.AddressablesUtils;
 
 
-namespace GoblinFortress.Runtime.Extensions
+namespace IdleCastle.Extensions
 {
 	public static class DisposableExtensions
 	{

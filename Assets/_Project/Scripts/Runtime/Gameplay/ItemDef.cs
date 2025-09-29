@@ -1,4 +1,4 @@
-namespace GoblinFortress.Runtime.Gameplay
+namespace IdleCastle.Gameplay
 {
 	// TODO Refactor: тут нужен аттрибут на локализуемые строки, чтобы можно было использовать их в UI
 	// также надо будет валидировать, что локализуемые строки есть в словаре локализации (возможно, перед билдом)

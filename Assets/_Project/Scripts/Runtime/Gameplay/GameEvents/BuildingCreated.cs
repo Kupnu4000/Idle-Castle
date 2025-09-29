@@ -1,7 +1,7 @@
-using GoblinFortress.Runtime.Gameplay.Buildings;
+using IdleCastle.Gameplay.Buildings;
 
 
-namespace GoblinFortress.Runtime.Gameplay.GameEvents
+namespace IdleCastle.Gameplay.GameEvents
 {
 	public readonly struct BuildingCreated
 	{

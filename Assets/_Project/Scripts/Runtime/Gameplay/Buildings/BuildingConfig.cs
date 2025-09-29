@@ -1,7 +1,7 @@
 using Modules.Configs;
 
 
-namespace GoblinFortress.Runtime.Gameplay.Buildings
+namespace IdleCastle.Gameplay.Buildings
 {
 	public abstract class BuildingConfig : Config
 	{
