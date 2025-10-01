@@ -5,7 +5,6 @@ using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 using Modules.StateMachine.Interfaces;
 using Modules.UISystem;
-using Modules.UISystem.Interfaces;
 
 
 namespace IdleCastle.AppCore.States
@@ -13,8 +12,7 @@ namespace IdleCastle.AppCore.States
 	[UsedImplicitly]
 	public class LobbyState : IState<IAppStateController>
 	{
-		private readonly IUISystem       _uiSystem;
-		private readonly UIFacadeFactory _uiFacadeFactory; // TODO Refactor: это может делать и IUISystem, а не UIFacadeFactory
+		private readonly IUIFactory<LobbyScreen> _lobbyScreenFactory;
 
 		private LobbyScreen _lobbyScreen;
 
@@ -22,20 +20,18 @@ namespace IdleCastle.AppCore.States
 
 		public LobbyState (
 			IAppStateController context,
-			IUISystem uiSystem,
-			UIFacadeFactory uiFacadeFactory
+			IUIFactory<LobbyScreen> lobbyScreenFactory
 		)
 		{
-			Context          = context;
-			_uiSystem        = uiSystem;
-			_uiFacadeFactory = uiFacadeFactory;
+			Context             = context;
+			_lobbyScreenFactory = lobbyScreenFactory;
 		}
 
-		public async UniTask OnEnterAsync (CancellationToken cancellationToken = default)
+		public UniTask OnEnterAsync (CancellationToken cancellationToken = default)
 		{
-			_uiSystem.AttachToMainCamera();
+			_lobbyScreen = _lobbyScreenFactory.Create();
 
-			_lobbyScreen = await _uiFacadeFactory.Create<LobbyScreen>(_uiSystem.Canvas.transform);
+			return UniTask.CompletedTask;
 		}
 
 		public UniTask OnExitAsync (CancellationToken cancellationToken = default)

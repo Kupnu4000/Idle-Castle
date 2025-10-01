@@ -5,11 +5,15 @@ using UnityEngine.UI;
 
 namespace IdleCastle.UI.Lobby
 {
-	[AddressableAutoKey("Lobby Screen")]
-	public class LobbyScreenView : UIScreen
+	public class LobbyScreenView : UIScreenView
 	{
 		[SerializeField] private Button _playButton;
 
 		public Button.ButtonClickedEvent PlayButtonClicked => _playButton.onClick;
+
+		public override void Dispose ()
+		{
+			_playButton.onClick.RemoveAllListeners();
+		}
 	}
 }

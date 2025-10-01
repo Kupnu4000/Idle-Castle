@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 122c4baf473f4026b965e29ecb5053ab, type: 3}
-  m_Name: Asset Reference Provider
+  m_Script: {fileID: 11500000, guid: d7cdd9a56ccc77f4e905db393e7fc5c7, type: 3}
+  m_Name: UI Prefabs Registry
   m_EditorClassIdentifier: 
-  _buildingWidgetView:
-    m_AssetGUID: 9ecb9cefd01cb9b42bdd59442ff6b32e
-    m_SubObjectName: 
-    m_SubObjectType: 
-    m_SubObjectGUID: 
-    m_EditorAssetChanged: 0
+  _prefabs:
+  - {fileID: 883661980712219594, guid: 83f1e51e9d5b5f54c9d19799f232930c, type: 3}
+  - {fileID: 6307592246487107250, guid: 9ecb9cefd01cb9b42bdd59442ff6b32e, type: 3}

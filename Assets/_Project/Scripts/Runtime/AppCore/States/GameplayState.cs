@@ -4,7 +4,6 @@ using IdleCastle.Gameplay;
 using JetBrains.Annotations;
 using Modules.AppCore.Interfaces;
 using Modules.StateMachine.Interfaces;
-using Modules.UISystem.Interfaces;
 
 
 namespace IdleCastle.AppCore.States
@@ -12,27 +11,24 @@ namespace IdleCastle.AppCore.States
 	[UsedImplicitly]
 	public class GameplayState : IState<IAppStateController>
 	{
-		private readonly IUISystem          _uiSystem;
 		private readonly GameplayController _gameplayController;
 
 		public IAppStateController Context {get;}
 
 		public GameplayState (
 			IAppStateController context,
-			IUISystem uiSystem,
 			GameplayController gameplayController
 		)
 		{
 			Context             = context;
-			_uiSystem           = uiSystem;
 			_gameplayController = gameplayController;
 		}
 
-		public async UniTask OnEnterAsync (CancellationToken cancellationToken = default)
+		public UniTask OnEnterAsync (CancellationToken cancellationToken = default)
 		{
-			_uiSystem.AttachToMainCamera();
+			_gameplayController.Initialize();
 
-			await _gameplayController.Initialize();
+			return UniTask.CompletedTask;
 		}
 
 		public UniTask OnExitAsync (CancellationToken cancellationToken = default)
@@ -46,5 +42,16 @@ namespace IdleCastle.AppCore.States
 		{
 			_gameplayController.Dispose();
 		}
+
+		// TODO: это типа загрузка ассетов, но пока не используется
+		// private async UniTask<IDisposable> PreloadAssets ()
+		// {
+		// 	// return await _addressablesCache
+		// 	//              .BuildLoadingGroup()
+		// 	//              .Add(_assetProvider.BuildingWidgetView)
+		// 	//              .LoadAsync();
+		//
+		//
+		// }
 	}
 }

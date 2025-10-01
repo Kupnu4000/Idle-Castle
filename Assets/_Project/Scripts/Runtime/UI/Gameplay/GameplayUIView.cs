@@ -5,8 +5,7 @@ using UnityEngine;
 
 namespace IdleCastle.UI.Gameplay
 {
-	[AddressableAutoKey("Gameplay UI")]
-	public class GameplayUIView : UIScreen
+	public class GameplayUIView : UIScreenView
 	{
 		[Space]
 		[SerializeField] private Transform _currencyWidgetRoot;
@@ -23,5 +22,7 @@ namespace IdleCastle.UI.Gameplay
 		{
 			return Instantiate(_currencyWidget, _currencyWidgetRoot);
 		}
+
+		public override void Dispose () {}
 	}
 }

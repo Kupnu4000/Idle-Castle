@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace IdleCastle.UI.Widgets
 {
-	public class BuildingWidgetView : MonoBehaviour, IUIView
+	public class BuildingWidgetView : UIView
 	{
 		[SerializeField] private ProgressBar _progressBar;
 
@@ -17,5 +17,7 @@ namespace IdleCastle.UI.Widgets
 		{
 			_progressBar.value = value;
 		}
+
+		public override void Dispose () {}
 	}
 }

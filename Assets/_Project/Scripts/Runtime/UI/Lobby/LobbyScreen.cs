@@ -1,35 +1,15 @@
-using Cysharp.Threading.Tasks;
-using IdleCastle.Zenject;
 using JetBrains.Annotations;
 using Modules.UISystem;
-using Modules.UISystem.Interfaces;
-using UnityEngine;
 
 
 namespace IdleCastle.UI.Lobby
 {
 	[UsedImplicitly]
-	public class LobbyScreen : UIFacade<LobbyScreenView, LobbyScreenPresenter>
+	public class LobbyScreen : UIScreen<LobbyScreenView, LobbyScreenPresenter>
 	{
-		private readonly IUISystem      _uiSystem;
-		private readonly GenericFactory _factory;
-
-		public LobbyScreen (IUISystem uiSystem, GenericFactory factory)
-		{
-			_uiSystem = uiSystem;
-			_factory  = factory;
-		}
-
-		protected override UniTask<LobbyScreenPresenter> CreatePresenter ()
-		{
-			LobbyScreenPresenter presenter = _factory.Create<LobbyScreenPresenter>();
-
-			return UniTask.FromResult(presenter);
-		}
-
-		protected override UniTask<LobbyScreenView> CreateView (Transform parent)
-		{
-			return _uiSystem.SpawnScreen<LobbyScreenView>();
-		}
+		public LobbyScreen (
+			IUIViewFactory<LobbyScreenView> viewFactory,
+			IUIPresenterFactory<LobbyScreenPresenter, LobbyScreenView> presenterFactory
+		) : base(viewFactory, presenterFactory) {}
 	}
 }

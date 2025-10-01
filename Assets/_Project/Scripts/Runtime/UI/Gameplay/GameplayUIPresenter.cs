@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using Cysharp.Threading.Tasks;
 using IdleCastle.Extensions;
 using IdleCastle.Gameplay;
 using IdleCastle.Gameplay.Buildings;
@@ -22,7 +21,7 @@ namespace IdleCastle.UI.Gameplay
 		private readonly Dictionary<ItemId, CurrencyWidget> _currencyWidgets = new();
 		private readonly Dictionary<ItemId, BuildingWidget> _buildingWidgets = new();
 		private readonly Dictionary<ItemId, CurrencyConfig> _currencyConfigs;
-		private readonly UIFacadeFactory                    _uiFacadeFactory;
+		private readonly IUIFactory<BuildingWidget>         _buildingWidgetFactory;
 		private readonly CompositeDisposable                _disposables = new();
 
 		private GameplayUIView _view;
@@ -32,11 +31,10 @@ namespace IdleCastle.UI.Gameplay
 			GoldCurrencyConfig goldConfig,
 			ISubscriber<BuildingCreated> buildingCreated,
 			ISubscriber<CurrencyAmountChanged> currencyAmountChanged,
-			UIFacadeFactory uiFacadeFactory
+			IUIFactory<BuildingWidget> buildingWidgetFactory
 		)
 		{
-			_uiFacadeFactory = uiFacadeFactory;
-
+			_buildingWidgetFactory = buildingWidgetFactory;
 			buildingCreated.Subscribe(HandleBuildingCreated).AddTo(_disposables);
 			currencyAmountChanged.Subscribe(HandleCurrencyChanged).AddTo(_disposables);
 
@@ -57,22 +55,19 @@ namespace IdleCastle.UI.Gameplay
 
 		private void HandleBuildingCreated (BuildingCreated message)
 		{
-			Impl(message.Building).Forget();
-			return;
+			IBuilding building = message.Building;
 
-			async UniTask Impl (IBuilding building)
-			{
-				if (_buildingWidgets.ContainsKey(building.Id))
-					throw new InvalidOperationException($"Building widget for {building.Id} already exists.");
+			if (_buildingWidgets.ContainsKey(building.Id))
+				throw new InvalidOperationException($"Building widget for {building.Id} already exists.");
 
-				BuildingWidget widget = await _uiFacadeFactory.Create<BuildingWidget>(_view.BuildingProgressMeterRoot);
+			BuildingWidget widget = _buildingWidgetFactory.Create(
+				building,
+				_view.BuildingProgressMeterRoot
+			);
 
-				widget.SetBuilding(building);
+			_buildingWidgets.Add(building.Id, widget);
 
-				_buildingWidgets.Add(building.Id, widget);
-
-				_disposables.Add(widget);
-			}
+			_disposables.Add(widget);
 		}
 
 		private void HandleCurrencyChanged (CurrencyAmountChanged message)

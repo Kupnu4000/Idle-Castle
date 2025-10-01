@@ -375,7 +375,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb619f7a4aff4383950415d9732dbe23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fadeDuration: 0.25
   _currencyWidgetRoot: {fileID: 6414414955259118067}
   _currencyWidget: {fileID: 8400343087765720791, guid: 5d6007cfd6533e14f99e6877bc20dc43, type: 3}
   _buildingProgressMeterRoot: {fileID: 4421536113068890881}
