@@ -1,4 +1,5 @@
 using IdleCastle.Gameplay;
+using IdleCastle.Gameplay.GameTime;
 using JetBrains.Annotations;
 using Modules.AddressablesUtils;
 using Zenject;

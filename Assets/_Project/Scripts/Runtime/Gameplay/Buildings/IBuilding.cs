@@ -1,7 +1,10 @@
+using System;
+
+
 namespace IdleCastle.Gameplay.Buildings
 {
 	// TODO Refactor: rename это по идее IIncomeGenerator
-	public interface IBuilding
+	public interface IBuilding : IDisposable
 	{
 		ItemId Id                 {get;}
 		ItemId CurrencyId         {get;} // TODO Refactor: у здания не будет валюты. Будут рецепты, которые генерируют ресурсы

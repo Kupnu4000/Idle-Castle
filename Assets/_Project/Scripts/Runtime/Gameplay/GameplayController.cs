@@ -29,7 +29,7 @@ namespace IdleCastle.Gameplay
 		{
 			_gameplayUI = _gameplayUIFactory.Create();
 
-			_gameWorld.Create<GoldMine>();
+			_gameWorld.CreateBuilding<GoldMine>();
 		}
 
 		public void Dispose ()

@@ -1,5 +1,5 @@
-using IdleCastle.Gameplay;
 using IdleCastle.Gameplay.Buildings;
+using IdleCastle.Gameplay.GameTime;
 using JetBrains.Annotations;
 using Modules.UISystem;
 using UnityEngine;
@@ -8,7 +8,7 @@ using UnityEngine;
 namespace IdleCastle.UI.Widgets
 {
 	[UsedImplicitly]
-	public class BuildingWidgetPresenter : IUIPresenter<BuildingWidgetView>
+	public class BuildingWidgetPresenter : IUIPresenter<BuildingWidgetView>, ILateTickable
 	{
 		private readonly ITickRunner _tickRunner;
 
@@ -24,27 +24,24 @@ namespace IdleCastle.UI.Widgets
 		{
 			_view = view;
 
-			_tickRunner.OnLateTick += HandleLateTick;
+			_tickRunner.Register(this);
 		}
 
-		// TODO Refactor: это не нравится. Можно было бы здание передавать в конструктор, а можно попробовать сделать билдер фасадов
 		public void SetBuilding (IBuilding building)
 		{
 			_model = building;
 		}
 
-		private void HandleLateTick (float deltaTime)
+		public void LateTick (float unused)
 		{
 			_view.SetNormalizedProgress(_model.NormalizedProgress);
 		}
 
 		public void Dispose ()
 		{
-			if (_tickRunner != null)
-			{
-				_tickRunner.OnLateTick -= HandleLateTick;
-			}
+			_tickRunner?.Unregister(this);
 
+			// TODO: убедиться, что вызывается хоть где-то
 			Debug.Log("Disposed!");
 		}
 	}

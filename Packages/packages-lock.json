@@ -107,6 +107,13 @@
       },
       "url": "http://18.212.63.248:4873"
     },
+    "com.kdev.modules.timers": {
+      "version": "1.0.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "http://18.212.63.248:4873"
+    },
     "com.kdev.modules.ui-system": {
       "version": "2.1.0",
       "depth": 0,

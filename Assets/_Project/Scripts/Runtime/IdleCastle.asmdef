@@ -24,6 +24,7 @@
         "Modules.Persistence",
         "Modules.StateMachine",
         "Modules.StateMachine.Zenject",
+        "Modules.Timers",
         "Modules.UISystem"
     ],
     "includePlatforms": [],

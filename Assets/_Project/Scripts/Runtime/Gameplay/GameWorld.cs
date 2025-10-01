@@ -14,22 +14,19 @@ namespace IdleCastle.Gameplay
 	public class GameWorld : IDisposable
 	{
 		private readonly GenericFactory                _genericFactory;
-		private readonly ITickRunner                   _tickRunner;
 		private readonly IPublisher<BuildingCreated>   _buildingCreatedPub;
 		private readonly Dictionary<ItemId, IBuilding> _buildings = new();
 
 		public GameWorld (
 			GenericFactory genericFactory,
-			ITickRunner tickRunner,
 			IPublisher<BuildingCreated> buildingCreatedPub
 		)
 		{
 			_genericFactory     = genericFactory;
-			_tickRunner         = tickRunner;
 			_buildingCreatedPub = buildingCreatedPub;
 		}
 
-		public void Create<TBuilding> () where TBuilding : class, IBuilding
+		public void CreateBuilding<TBuilding> () where TBuilding : class, IBuilding
 		{
 			TBuilding building = _genericFactory.Create<TBuilding>();
 
@@ -39,15 +36,13 @@ namespace IdleCastle.Gameplay
 			}
 
 			_buildingCreatedPub.Publish(new BuildingCreated(building));
-
-			_tickRunner.OnTick += building.Tick; // TODO Refactor: эта подписка может находиться в самом здании, а не в GameWorld
 		}
 
 		public void Dispose ()
 		{
 			foreach (IBuilding building in _buildings.Values)
 			{
-				_tickRunner.OnTick -= building.Tick;
+				building.Dispose();
 			}
 
 			_buildings.Clear();

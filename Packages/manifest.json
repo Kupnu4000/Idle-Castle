@@ -13,6 +13,7 @@
     "com.kdev.modules.input-handler": "1.0.0",
     "com.kdev.modules.persistence": "1.1.0",
     "com.kdev.modules.playerprefs-values": "1.0.0",
+    "com.kdev.modules.timers": "1.0.0",
     "com.kdev.modules.ui-system": "2.1.0",
     "com.kdev.third-party.zenject": "9.2.0",
     "com.unity.2d.sprite": "1.0.0",
